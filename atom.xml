@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>一个博客</title>
+  <title>博客</title>
   
-  <subtitle>学习中...</subtitle>
+  <subtitle>个人博客</subtitle>
   <link href="https://xly5.gitee.io/blog/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/blog/"/>
