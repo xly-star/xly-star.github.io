@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/blog/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/blog/"/>
-  <updated>2020-10-24T02:13:41.360Z</updated>
+  <updated>2020-10-24T08:07:00.372Z</updated>
   <id>https://xly5.gitee.io/blog/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建个人博客</title>
+    <link href="https://xly5.gitee.io/blog/2020/10/23/da-jian-ge-ren-bo-ke/"/>
+    <id>https://xly5.gitee.io/blog/2020/10/23/da-jian-ge-ren-bo-ke/</id>
+    <published>2020-10-23T08:41:46.000Z</published>
+    <updated>2020-10-24T08:07:00.372Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;搭建博客需要node-js的npm和git环境&quot;&gt;&lt;a href=&quot;#搭建博客需要node-js的npm和git环境&quot; class=&quot;headerlink&quot; title=&quot;搭建博客需要node.js的npm和git环境&quot;&gt;&lt;/a&gt;搭建博客需要node.js的npm和git环境&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="博客" scheme="https://xly5.gitee.io/blog/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="搭建hexo博客" scheme="https://xly5.gitee.io/blog/tags/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>markdown</title>

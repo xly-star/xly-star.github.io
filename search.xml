@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>搭建个人博客</title>
+      <link href="/blog/2020/10/23/da-jian-ge-ren-bo-ke/"/>
+      <url>/blog/2020/10/23/da-jian-ge-ren-bo-ke/</url>
+      
+        <content type="html"><![CDATA[<h1 id="搭建博客需要node-js的npm和git环境"><a href="#搭建博客需要node-js的npm和git环境" class="headerlink" title="搭建博客需要node.js的npm和git环境"></a>搭建博客需要node.js的npm和git环境</h1><h2 id="首先下载npm和git"><a href="#首先下载npm和git" class="headerlink" title="首先下载npm和git"></a>首先下载<a href="http://nodejs.cn/download/">npm</a>和<a href="https://git-scm.com/download/">git</a></h2><h2 id="安装hexo运行环境"><a href="#安装hexo运行环境" class="headerlink" title="安装hexo运行环境"></a>安装hexo运行环境</h2><ol><li><p>npm和git安装完成后的检验是 npm -v 和 node -v</p></li><li><p>如图：</p><p><img src="https://my-blog1024.oss-cn-beijing.aliyuncs.com/%E6%A3%80%E9%AA%8Cnpm%E5%92%8Cnode.png" alt="install" title="node"></p><p><img src="https://my-blog1024.oss-cn-beijing.aliyuncs.com/%E6%A3%80%E9%AA%8Cgit.png" alt="git" title="git"> </p></li></ol><h2 id="安装hexo基本框架"><a href="#安装hexo基本框架" class="headerlink" title="安装hexo基本框架"></a>安装hexo基本框架</h2><ol><li><p>新建一个文件夹给自己的博客找个小窝</p></li><li><p>然后进入新建的文件夹，右击Git Bash Here</p></li><li><pre><code>//第一条   这是安装hexo的基础框架 , npm安装到全局，熟悉的话可以安装局部npm install -g hexo//第二条   这是初始化hexo框架 这个可能会比较慢(要有耐心)hexo init//第三条 安装所需要的组件npm install//第四条 编译生成静态页面hexo g//第五条 启动本地服务hexo s</code></pre></li></ol><ol start="4"><li><p>启动后的结果<img src="https://my-blog1024.oss-cn-beijing.aliyuncs.com/%E8%BF%90%E8%A1%8C.png" alt="yans" title="演示结果"></p></li><li><p>然后访问 <a href="http://localhost:4000/">http://localhost:4000/</a> <img src="https://my-blog1024.oss-cn-beijing.aliyuncs.com/%E6%BC%94%E7%A4%BA.png" alt="result" title="页面"></p></li></ol><h1 id="hexo命令大全："><a href="#hexo命令大全：" class="headerlink" title="hexo命令大全："></a>hexo命令大全：</h1><pre><code>hexo n &quot;博客名字&quot; #执行成功后会在根目录下\source\_posts生成一个同名的md文件 #编写这个文件就可 然后执行 hexo clean hexo g  hexo d 部署到github上去hexo clean #清除缓存 网页正常情况下可以忽略此条命令hexo g  #生成静态网页hexo s  #启动服务预览hexo d  #开始部署hexo g == hexo generate#生成hexo s == hexo server #启动服务预览hexo d == hexo deploy#部署</code></pre><h1 id="github配置个人博客免域名"><a href="#github配置个人博客免域名" class="headerlink" title="github配置个人博客免域名"></a>github配置个人博客免域名</h1><ol><li><p>注册一个github账户，用邮箱就行<img src="https://my-blog1024.oss-cn-beijing.aliyuncs.com/github%E5%88%9B%E5%BB%BArepositories.png" alt="github" title="github配置"></p></li><li><p>然后点击new </p></li><li><p><img src="https://my-blog1024.oss-cn-beijing.aliyuncs.com/github.png" alt="github" title="gitthub"></p></li><li><p>我的因为创建过了所以报错</p></li><li><p>创建repository的名字一定要是 用户名.github.io,不然访问不到</p></li><li><p>之后将code哪里http的git连接复制粘贴到 安装好的hexo的 <code>_config.yml</code> 中</p><pre><code>deploy:  type: git  repo: https://github.com/xu196/xu196.github.io.git  branch: master</code></pre><p>里面 , 运行下面代码在根目录的命令行界面</p><pre><code>hexo cleanhexo ghexo d</code></pre><ul><li>如果上面repo配置的是http的路径<code>hexo d</code> 之后需要输入github的用户名和密码</li><li>要是想要无密码push就需要配置ssh的路径，这里不做过多说明，需要自行百度</li><li><code>hexo d</code> 成功页面</li><li><img src="https://my-blog1024.oss-cn-beijing.aliyuncs.com/push%E6%88%90%E5%8A%9F.png" alt="push" title="push to github"></li><li>接下来就可以访问博客了， 就是之前设置的<code>repository</code>名字，我的是<code>xly-star.github.io</code></li><li>接下来就可以尽情的开发自己的博客了</li><li>美化博客请看接下来的后续博客！</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 搭建hexo博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>markdown</title>
       <link href="/blog/2020/10/23/da-jian-ge-ren-bo-ke-xin-de/"/>
       <url>/blog/2020/10/23/da-jian-ge-ren-bo-ke-xin-de/</url>
