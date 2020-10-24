@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2020-10-24T09:17:16.529Z</updated>
+  <updated>2020-10-24T08:07:00.372Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -15,23 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>测试gitee</title>
-    <link href="https://xly5.gitee.io/2020/10/24/ce-shi-gitee/"/>
-    <id>https://xly5.gitee.io/2020/10/24/ce-shi-gitee/</id>
-    <published>2020-10-24T09:14:38.000Z</published>
-    <updated>2020-10-24T09:17:16.529Z</updated>
-    
-    
-    <summary type="html">&lt;hr&gt;</summary>
-    
-    
-    
-    
-    <category term="测试" scheme="https://xly5.gitee.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
   
   <entry>
     <title>搭建个人博客</title>
