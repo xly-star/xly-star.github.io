@@ -3,11 +3,11 @@
   <title>博客</title>
   
   <subtitle>个人博客</subtitle>
-  <link href="https://xly5.gitee.io/blog/atom.xml" rel="self"/>
+  <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
-  <link href="https://xly5.gitee.io/blog/"/>
+  <link href="https://xly5.gitee.io/"/>
   <updated>2020-10-24T09:17:16.529Z</updated>
-  <id>https://xly5.gitee.io/blog/</id>
+  <id>https://xly5.gitee.io/</id>
   
   <author>
     <name>xu ling yun</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>测试gitee</title>
-    <link href="https://xly5.gitee.io/blog/2020/10/24/ce-shi-gitee/"/>
-    <id>https://xly5.gitee.io/blog/2020/10/24/ce-shi-gitee/</id>
+    <link href="https://xly5.gitee.io/2020/10/24/ce-shi-gitee/"/>
+    <id>https://xly5.gitee.io/2020/10/24/ce-shi-gitee/</id>
     <published>2020-10-24T09:14:38.000Z</published>
     <updated>2020-10-24T09:17:16.529Z</updated>
     
@@ -29,14 +29,14 @@
     
     
     
-    <category term="测试" scheme="https://xly5.gitee.io/blog/tags/%E6%B5%8B%E8%AF%95/"/>
+    <category term="测试" scheme="https://xly5.gitee.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>搭建个人博客</title>
-    <link href="https://xly5.gitee.io/blog/2020/10/23/da-jian-ge-ren-bo-ke/"/>
-    <id>https://xly5.gitee.io/blog/2020/10/23/da-jian-ge-ren-bo-ke/</id>
+    <link href="https://xly5.gitee.io/2020/10/23/da-jian-ge-ren-bo-ke/"/>
+    <id>https://xly5.gitee.io/2020/10/23/da-jian-ge-ren-bo-ke/</id>
     <published>2020-10-23T08:41:46.000Z</published>
     <updated>2020-10-24T08:07:00.372Z</updated>
     
@@ -45,17 +45,17 @@
     
     
     
-    <category term="博客" scheme="https://xly5.gitee.io/blog/categories/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="https://xly5.gitee.io/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-    <category term="搭建hexo博客" scheme="https://xly5.gitee.io/blog/tags/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/"/>
+    <category term="搭建hexo博客" scheme="https://xly5.gitee.io/tags/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>markdown</title>
-    <link href="https://xly5.gitee.io/blog/2020/10/23/da-jian-ge-ren-bo-ke-xin-de/"/>
-    <id>https://xly5.gitee.io/blog/2020/10/23/da-jian-ge-ren-bo-ke-xin-de/</id>
+    <link href="https://xly5.gitee.io/2020/10/23/da-jian-ge-ren-bo-ke-xin-de/"/>
+    <id>https://xly5.gitee.io/2020/10/23/da-jian-ge-ren-bo-ke-xin-de/</id>
     <published>2020-10-23T02:28:55.000Z</published>
     <updated>2020-10-24T02:13:41.360Z</updated>
     
@@ -64,10 +64,10 @@
     
     
     
-    <category term="草稿" scheme="https://xly5.gitee.io/blog/categories/%E8%8D%89%E7%A8%BF/"/>
+    <category term="草稿" scheme="https://xly5.gitee.io/categories/%E8%8D%89%E7%A8%BF/"/>
     
     
-    <category term="草稿" scheme="https://xly5.gitee.io/blog/tags/%E8%8D%89%E7%A8%BF/"/>
+    <category term="草稿" scheme="https://xly5.gitee.io/tags/%E8%8D%89%E7%A8%BF/"/>
     
   </entry>
   
