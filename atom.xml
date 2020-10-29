@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2020-10-27T04:02:09.328Z</updated>
+  <updated>2020-10-29T06:57:16.874Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>单例模式最终版</title>
+    <link href="https://xly5.gitee.io/2020/10/29/dan-li-mo-shi-zui-zhong-ban/"/>
+    <id>https://xly5.gitee.io/2020/10/29/dan-li-mo-shi-zui-zhong-ban/</id>
+    <published>2020-10-29T06:53:18.000Z</published>
+    <updated>2020-10-29T06:57:16.874Z</updated>
+    
+    
+    <summary type="html">&lt;pre&gt;&lt;code&gt;# 单例模式&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="设计模式" scheme="https://xly5.gitee.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="volatile" scheme="https://xly5.gitee.io/tags/volatile/"/>
+    
+    <category term="单例模式" scheme="https://xly5.gitee.io/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>GC的认识</title>
