@@ -4,16 +4,47 @@
   
     
     <entry>
+      <title>CAS的底层分析</title>
+      <link href="2020/10/29/cas-de-di-ceng-fen-xi/"/>
+      <url>2020/10/29/cas-de-di-ceng-fen-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CAS-Compare-And-Swap-比较交换"><a href="#CAS-Compare-And-Swap-比较交换" class="headerlink" title="CAS (Compare And Swap)比较交换"></a>CAS (Compare And Swap)比较交换</h1><h2 id="为什么atomic包下面的类可以保证原子性？"><a href="#为什么atomic包下面的类可以保证原子性？" class="headerlink" title="为什么atomic包下面的类可以保证原子性？"></a>为什么atomic包下面的类可以保证原子性？</h2><p>​    1.  atomic包中的getAndIncrement使用的是unsafe中的方法，unsafe类内是调用系统资源的方法<code>native</code>修饰有很多，其中在实现getAndIncrement时使用了<code>compareAndSwapInt</code>方法，<code>compareAndSwapInt</code>是cpu原语(下面解释)，所以在修改value时是不会出现多线程不安全的问题，保证了原子性</p><p><img src="/medias/JUC/CAS%E6%BA%90%E7%A0%81.png" alt="CAS源码" title="CAS源码"></p><ol start="2"><li><p>在getAddInt第一个变量是代表当前对象，第二个变量是代表内存偏移量(即在内存地址的值)，第三个变量代表修改的值</p></li><li><p>var5获取到内存地址的值然后在修改时与重新获取的值做比较，若是值不变就修改当前内存地址的值，且方法true取反，循环结束</p></li><li><p>若是值与之前获取的var5不一致则修改失败，返回false，取反循环继续</p></li><li><p><strong><code>compareAndSwapInt</code>方法是一个cpu原语</strong></p></li><li><p>cpu原语：计算机进程的控制通常由原语完成。所谓原语，一般是指由若干条指令组成的程序段，用来实现某个特定功能，在执行过程中不可被<strong>中断</strong>(个人理解:有点类似与锁)。</p></li></ol><h2 id="CAS的缺点"><a href="#CAS的缺点" class="headerlink" title="CAS的缺点"></a>CAS的缺点</h2><p><img src="/medias/JUC/CAS%E7%BC%BA%E7%82%B9.png" alt="CAS缺点" title="CAS缺点"></p><ol><li>cpu开销可能会大</li><li>只能保证一个共享变量的原子性</li><li>产生ABA问题（请看下一篇博客）</li></ol><h2 id="unsafe"><a href="#unsafe" class="headerlink" title="unsafe"></a>unsafe</h2><p>​      unsafe是CAS的核心类由于Java 方法无法直接访问底层 ,需要通过本地(native)方法来访问,UnSafe相当于一个后面,基于该类可以直接操作特额定的内存数据.UnSafe类在于sun.misc包中,其内部方法操作可以向C的指针一样直接操作内存,因为Java中CAS操作的助兴依赖于UNSafe类的方法.<br>注意UnSafe类中所有的方法都是native修饰的,也就是说UnSafe类中的方法都是直接调用操作底层资源执行响应的任务</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JUC </category>
+          
+          <category> cpu原语 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CAS </tag>
+            
+            <tag> unsafe </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>单例模式最终版</title>
       <link href="2020/10/29/dan-li-mo-shi-zui-zhong-ban/"/>
       <url>2020/10/29/dan-li-mo-shi-zui-zhong-ban/</url>
       
-        <content type="html"><![CDATA[<pre><code># 单例模式</code></pre><pre><code>public class SignalTonDemo &#123;    private static volatile SignalTonDemo instance = null;    private SignalTonDemo() &#123;        System.out.println(Thread.currentThread().getName() + &quot;\t实例化对象&quot;);    &#125;    /**DCL(Double Check Lock)双重检查锁     * 线程还未安全，可能发生指令重排序，会使返回的instance为null     * 实例化对象分为三个阶段     * 1.分配空间     * 2.初始化     * 3.被引用     * 在2,3阶段没有依赖关系可以被指令重排序，先被引用在初始化     * 有几率变成在分配空间后 初始化前下一个线程访问if返回false     * ，然后方法方法instance，因为还未初始化所以instance为null     *     * 使用volatile解决，volatile禁止指令重排序    */    public static SignalTonDemo getInstance() &#123;        if (instance == null) &#123;            synchronized (SignalTonDemo.class) &#123;                if (instance == null) &#123;                    instance = new SignalTonDemo();                &#125;            &#125;        &#125;        return instance;    &#125;    public static void main(String[] args) &#123;        for (int i = 0; i &lt; 10; i++) &#123;            new Thread(() -&gt; &#123;                SignalTonDemo.getInstance();            &#125;, String.valueOf(i)).start();        &#125;    &#125;&#125;</code></pre>]]></content>
+        <content type="html"><![CDATA[<pre><code># 单例模式</code></pre><p><img src="/medias/JUC/DCL%E7%BA%BF%E7%A8%8B%E4%B8%8D%E5%AE%89%E5%85%A8.png" alt="DCL线程不安全" title="DCL线程不安全"></p><p><img src="/medias/JUC/DCL%E7%BA%BF%E7%A8%8B%E4%B8%8D%E5%AE%89%E5%85%A82.png" alt="DCL线程不安全" title="DCL线程不安全"></p><pre><code>public class SignalTonDemo &#123;    private static volatile SignalTonDemo instance = null;    private SignalTonDemo() &#123;        System.out.println(Thread.currentThread().getName() + &quot;\t实例化对象&quot;);    &#125;    /**DCL(Double Check Lock)双重检查锁     * 线程还未安全，可能发生指令重排序，会使返回的instance为null     * 实例化对象分为三个阶段     * 1.分配空间     * 2.初始化     * 3.被引用     * 在2,3阶段没有依赖关系可以被指令重排序，先被引用在初始化     * 有几率变成在分配空间后 初始化前下一个线程访问if返回false     * ，然后方法方法instance，因为还未初始化所以instance为null     *     * 使用volatile解决，volatile禁止指令重排序    */    public static SignalTonDemo getInstance() &#123;        if (instance == null) &#123;            synchronized (SignalTonDemo.class) &#123;                if (instance == null) &#123;                    instance = new SignalTonDemo();                &#125;            &#125;        &#125;        return instance;    &#125;    public static void main(String[] args) &#123;        for (int i = 0; i &lt; 10; i++) &#123;            new Thread(() -&gt; &#123;                SignalTonDemo.getInstance();            &#125;, String.valueOf(i)).start();        &#125;    &#125;&#125;</code></pre>]]></content>
       
       
       <categories>
           
           <category> 设计模式 </category>
+          
+          <category> JUC </category>
           
       </categories>
       

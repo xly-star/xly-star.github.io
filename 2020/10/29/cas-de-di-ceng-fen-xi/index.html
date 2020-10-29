@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="volatile是什么?, HTML,CSS,JavaScript,JQuery,Java,Spring等">
+    <meta name="keywords" content="CAS的底层分析, HTML,CSS,JavaScript,JQuery,Java,Spring等">
     <meta name="description" content="专注web">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>volatile是什么? | 博客</title>
+    <title>CAS的底层分析 | 博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -289,12 +289,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">volatile是什么?</h1>
+                    <h1 class="description center-align post-title">CAS的底层分析</h1>
                 </div>
             </div>
         </div>
@@ -411,8 +411,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/volatile/">
-                                <span class="chip bg-color">volatile</span>
+                            <a href="/tags/CAS/">
+                                <span class="chip bg-color">CAS</span>
+                            </a>
+                        
+                            <a href="/tags/unsafe/">
+                                <span class="chip bg-color">unsafe</span>
                             </a>
                         
                     </div>
@@ -427,6 +431,10 @@
                                 JUC
                             </a>
                         
+                            <a href="/categories/JUC/cpu%E5%8E%9F%E8%AF%AD/" class="post-category">
+                                cpu原语
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -436,28 +444,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-26
+                    2020-10-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-28
+                    2020-10-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    487
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -472,184 +480,27 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="valatile是什么？"><a href="#valatile是什么？" class="headerlink" title="valatile是什么？"></a>valatile是什么？</h1><ul>
-<li><p><strong>volatile是一种java虚拟机提供轻量级的同步机制</strong></p>
+                <h1 id="CAS-Compare-And-Swap-比较交换"><a href="#CAS-Compare-And-Swap-比较交换" class="headerlink" title="CAS (Compare And Swap)比较交换"></a>CAS (Compare And Swap)比较交换</h1><h2 id="为什么atomic包下面的类可以保证原子性？"><a href="#为什么atomic包下面的类可以保证原子性？" class="headerlink" title="为什么atomic包下面的类可以保证原子性？"></a>为什么atomic包下面的类可以保证原子性？</h2><p>​    1.  atomic包中的getAndIncrement使用的是unsafe中的方法，unsafe类内是调用系统资源的方法<code>native</code>修饰有很多，其中在实现getAndIncrement时使用了<code>compareAndSwapInt</code>方法，<code>compareAndSwapInt</code>是cpu原语(下面解释)，所以在修改value时是不会出现多线程不安全的问题，保证了原子性</p>
+<p><img src="/medias/JUC/CAS%E6%BA%90%E7%A0%81.png" alt="CAS源码" title="CAS源码"></p>
+<ol start="2">
+<li><p>在getAddInt第一个变量是代表当前对象，第二个变量是代表内存偏移量(即在内存地址的值)，第三个变量代表修改的值</p>
 </li>
-<li><p><strong>volatile的三个特性</strong></p>
+<li><p>var5获取到内存地址的值然后在修改时与重新获取的值做比较，若是值不变就修改当前内存地址的值，且方法true取反，循环结束</p>
+</li>
+<li><p>若是值与之前获取的var5不一致则修改失败，返回false，取反循环继续</p>
+</li>
+<li><p><strong><code>compareAndSwapInt</code>方法是一个cpu原语</strong></p>
+</li>
+<li><p>cpu原语：计算机进程的控制通常由原语完成。所谓原语，一般是指由若干条指令组成的程序段，用来实现某个特定功能，在执行过程中不可被<strong>中断</strong>(个人理解:有点类似与锁)。</p>
+</li>
+</ol>
+<h2 id="CAS的缺点"><a href="#CAS的缺点" class="headerlink" title="CAS的缺点"></a>CAS的缺点</h2><p><img src="/medias/JUC/CAS%E7%BC%BA%E7%82%B9.png" alt="CAS缺点" title="CAS缺点"></p>
 <ol>
-<li><p>保证可见性</p>
-<ul>
-<li><p>JMM(Java Member Model)Java内存模型</p>
-</li>
-<li><p>由于JVM运行的实体是线程，而每个线程创建时JVM都会为其创建一个工作空间（有些地方称为栈空间），工作内存是每个线程的私有数据区域，而Java内存模型中规定所有变量都存储在主存中，主内存是共享区域，所有线程都可以访问，<strong>但线程对变量的操作（读取赋值等）必须在工作空间中进行，首先要从主内存拷贝数据到工作空间，然后对变量进行操作，操作完成在写回主内存</strong>，不能直接操作主内存中的变量，各个线程的工作内存中存储着主内存中的<strong>变量拷贝副本</strong>，因此不同线程间不能访问对方工作内存，线程间的传值必须通过主内存来完成，其简要访问过程如下：</p>
-<p><img src="/medias/JUC/JMM%E4%B8%BB%E5%86%85%E5%AD%98%E5%92%8C%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" alt="JMM主内存和工作空间" title="JMM主内存和工作空间"></p>
-</li>
-<li><h2 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h2><pre><code>class Number&#123;
-    Integer number = 0;
-
-    public void addTo30()&#123;
-        number = 30;
-    &#125;
-&#125;
-
-public class VolatileTest &#123;
-    public static void main(String[] args) &#123;
-        Number number = new Number();
-        new Thread(()-&gt;&#123;
-            System.out.println(&quot;Number begin&quot;);
-            try &#123;
-                TimeUnit.SECONDS.sleep(3);
-            &#125; catch (InterruptedException e) &#123;
-                e.printStackTrace();
-            &#125;
-            number.addTo30();
-            System.out.println(&quot;修改number=30&quot;);
-        &#125;, &quot;AAA&quot;).start();
-
-        //如果number没有改变就一直死循环
-        //结果死循环程序未结束，因为主线程复制了number=0到工作空间，之后AAA线程修改了number主线程并不知道
-        while (number.number == 0)&#123;
-
-        &#125;
-
-        System.out.println(&quot;Number &quot; + number.number);
-    &#125;
-&#125;
-</code></pre>
-<p><img src="/medias/JUC/%E6%9C%AA%E4%BD%BF%E7%94%A8volatitle.png" alt="未使用volatitle" title="未使用volatitle"></p>
-</li>
-<li><pre><code>class Number&#123;
-    volatile Integer number = 0;
-
-    public void addTo30()&#123;
-        number = 30;
-    &#125;
-&#125;
-public class VolatileTest &#123;
-    public static void main(String[] args) &#123;
-        Number number = new Number();
-        new Thread(()-&gt;&#123;
-            System.out.println(&quot;Number begin&quot;);
-            try &#123;
-                TimeUnit.SECONDS.sleep(3);
-            &#125; catch (InterruptedException e) &#123;
-                e.printStackTrace();
-            &#125;
-            number.addTo30();
-            System.out.println(&quot;修改number=30&quot;);
-        &#125;, &quot;AAA&quot;).start();
-
-        //如果number没有改变就一直死循环
-        //结果循环结束，因为number使用了volatile，在线程AAA修改number写回主内存时，
-        // 主内存通知了main线程，main线程重新读取number值所以循环结束
-        while (number.number == 0)&#123;
-
-        &#125;
-
-        System.out.println(&quot;Number &quot; + number.number);
-    &#125;
-&#125;
-</code></pre>
-<p><img src="/medias/JUC/%E4%BD%BF%E7%94%A8volatitle.png" alt="使用volatitle" title="使用volatile"></p>
-</li>
-</ul>
-</li>
-<li><p>不保证原子性</p>
-<ul>
-<li><p>使用volatile的++操作</p>
-<pre><code>class Number&#123;
-    volatile Integer number = 0;
-
-    public void addPlusPlus()&#123;
-        /*
-        number++不是原子操作
-        第一步：取出number数据
-        第二步：number加一
-        第三步：写回数据    
-         */
-        number++;
-    &#125;
-&#125;
-public class VolatileTest &#123;
-    public static void main(String[] args) throws InterruptedException &#123;
-         //减少计数JUC辅助工具类
-        CountDownLatch countDownLatch = new CountDownLatch(20);
-        Number number = new Number();
-        for (int i = 1; i &lt;= 20; i++) &#123;
-            new Thread(()-&gt;&#123;
-                for (int j = 0; j &lt; 1000; j++) &#123;
-                    /**
-                     * 在工作空间volatile虽然会然主内存通知工作空间数据的修改
-                     * 但是在一个线程写入数据的同时主内存开始通知，其他线程还没被通知到也写入数据到主内存中
-                     * 产生了写覆盖，所以最后的数值没有到达20000
-                     */
-                    number.addPlusPlus();
-                &#125;
-                countDownLatch.countDown();
-            &#125;,&quot;BBB&quot;).start();
-        &#125;
-        countDownLatch.await();
-        System.out.println(&quot;number最终得分：&quot; + number.number);
-    &#125;
-&#125;</code></pre>
-<pre><code>result:
-number最终得分：18167
-
-Process finished with exit code 0</code></pre>
-<p>结果表明volatile不保证原子性，虽然使用synchronized可以解决该问题，但是未免有点杀鸡用牛刀，其他解决方法：</p>
-</li>
-<li><p>使用atomicInteger类型可以解决原子性问题：</p>
-<pre><code>class Number&#123;
-    volatile Integer number = 0;
-    AtomicInteger atomicInteger = new AtomicInteger();
-
-    public void addPlusPlus()&#123;
-        /*
-        number++不是原子操作
-        第一步：取出number数据
-        第二步：number加一
-        第三步：写回数据
-         */
-        number++;
-        atomicInteger.getAndIncrement();
-    &#125;
-&#125;
-public class VolatileTest &#123;
-    public static void main(String[] args) throws InterruptedException &#123;
-        //减少计数JUC辅助工具类
-        CountDownLatch countDownLatch = new CountDownLatch(20);
-        Number number = new Number();
-        for (int i = 1; i &lt;= 20; i++) &#123;
-            new Thread(()-&gt;&#123;
-                for (int j = 0; j &lt; 1000; j++) &#123;
-                    number.addPlusPlus();
-                &#125;
-                countDownLatch.countDown();
-            &#125;,&quot;BBB&quot;).start();
-        &#125;
-        countDownLatch.await();
-        System.out.println(&quot;number最终得分：&quot; + number.number);
-        System.out.println(&quot;atomicInteger最终得分：&quot; + number.atomicInteger);
-    &#125;
-&#125;
-</code></pre>
-<pre><code>result:
-number最终得分：18923
-atomicInteger最终得分：20000
-
-Process finished with exit code 0</code></pre>
-</li>
-</ul>
-</li>
+<li>cpu开销可能会大</li>
+<li>只能保证一个共享变量的原子性</li>
+<li>产生ABA问题（请看下一篇博客）</li>
 </ol>
-</li>
-</ul>
-<ol start="3">
-<li><p>禁止指令重排</p>
-<p><img src="/medias/JUC/%E6%8C%87%E4%BB%A4%E9%87%8D%E6%8E%92%E5%BA%8F.png" alt="指令重排序" title="指令重排序"></p>
-<p>加上volatile可以使指令不重排序</p>
-</li>
-</ol>
+<h2 id="unsafe"><a href="#unsafe" class="headerlink" title="unsafe"></a>unsafe</h2><p>​      unsafe是CAS的核心类由于Java 方法无法直接访问底层 ,需要通过本地(native)方法来访问,UnSafe相当于一个后面,基于该类可以直接操作特额定的内存数据.UnSafe类在于sun.misc包中,其内部方法操作可以向C的指针一样直接操作内存,因为Java中CAS操作的助兴依赖于UNSafe类的方法.<br>注意UnSafe类中所有的方法都是native修饰的,也就是说UnSafe类中的方法都是直接调用操作底层资源执行响应的任务</p>
 
             </div>
             <hr/>
@@ -675,7 +526,7 @@ Process finished with exit code 0</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xly5.gitee.io/2020/10/26/volatile-shi-shi-me/">https://xly5.gitee.io/2020/10/26/volatile-shi-shi-me/</a>
+                    <a href="https://xly5.gitee.io/2020/10/29/cas-de-di-ceng-fen-xi/">https://xly5.gitee.io/2020/10/29/cas-de-di-ceng-fen-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -713,8 +564,12 @@ Process finished with exit code 0</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/volatile/">
-                                    <span class="chip bg-color">volatile</span>
+                                <a href="/tags/CAS/">
+                                    <span class="chip bg-color">CAS</span>
+                                </a>
+                            
+                                <a href="/tags/unsafe/">
+                                    <span class="chip bg-color">unsafe</span>
                                 </a>
                             
                         </div>
@@ -928,50 +783,56 @@ Process finished with exit code 0</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/27/jvm-de-ren-shi/">
+                <a href="/2020/10/29/cas-de-di-ceng-fen-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="GC的认识">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="CAS的底层分析">
                         
-                        <span class="card-title">GC的认识</span>
+                        <span class="card-title">CAS的底层分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            GC的作用域
+                            CAS (Compare And Swap)比较交换
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/GC/" class="post-category">
-                                    GC
+                            <a href="/categories/JUC/" class="post-category">
+                                    JUC
                                 </a>
                             
-                            <a href="/categories/GC/JVM/" class="post-category">
-                                    JVM
+                            <a href="/categories/JUC/cpu%E5%8E%9F%E8%AF%AD/" class="post-category">
+                                    cpu原语
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/GC%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86/">
-                        <span class="chip bg-color">GC的基本认识</span>
+                    <a href="/tags/CAS/">
+                        <span class="chip bg-color">CAS</span>
+                    </a>
+                    
+                    <a href="/tags/unsafe/">
+                        <span class="chip bg-color">unsafe</span>
                     </a>
                     
                 </div>
@@ -985,31 +846,35 @@ Process finished with exit code 0</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/23/da-jian-ge-ren-bo-ke/">
+                <a href="/2020/10/29/dan-li-mo-shi-zui-zhong-ban/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="搭建个人博客">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="单例模式最终版">
                         
-                        <span class="card-title">搭建个人博客</span>
+                        <span class="card-title">单例模式最终版</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            搭建博客需要node.js的npm和git环境
+                            # 单例模式
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    博客
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
+                                </a>
+                            
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/JUC/" class="post-category">
+                                    JUC
                                 </a>
                             
                             
@@ -1019,8 +884,12 @@ Process finished with exit code 0</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">搭建hexo博客</span>
+                    <a href="/tags/volatile/">
+                        <span class="chip bg-color">volatile</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">单例模式</span>
                     </a>
                     
                 </div>

@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2020-10-29T06:57:16.874Z</updated>
+  <updated>2020-10-29T08:46:09.061Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -17,18 +17,56 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CAS的底层分析</title>
+    <link href="https://xly5.gitee.io/2020/10/29/cas-de-di-ceng-fen-xi/"/>
+    <id>https://xly5.gitee.io/2020/10/29/cas-de-di-ceng-fen-xi/</id>
+    <published>2020-10-29T08:06:57.000Z</published>
+    <updated>2020-10-29T08:46:09.061Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CAS-Compare-And-Swap-比较交换&quot;&gt;&lt;a href=&quot;#CAS-Compare-And-Swap-比较交换&quot; class=&quot;headerlink&quot; title=&quot;CAS (Compare And Swap)比较交换&quot;&gt;&lt;/a&gt;CAS</summary>
+        
+      
+    
+    
+    
+    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
+    
+    <category term="cpu原语" scheme="https://xly5.gitee.io/categories/JUC/cpu%E5%8E%9F%E8%AF%AD/"/>
+    
+    
+    <category term="CAS" scheme="https://xly5.gitee.io/tags/CAS/"/>
+    
+    <category term="unsafe" scheme="https://xly5.gitee.io/tags/unsafe/"/>
+    
+  </entry>
+  
+  <entry>
     <title>单例模式最终版</title>
     <link href="https://xly5.gitee.io/2020/10/29/dan-li-mo-shi-zui-zhong-ban/"/>
     <id>https://xly5.gitee.io/2020/10/29/dan-li-mo-shi-zui-zhong-ban/</id>
     <published>2020-10-29T06:53:18.000Z</published>
-    <updated>2020-10-29T06:57:16.874Z</updated>
+    <updated>2020-10-29T08:12:59.193Z</updated>
     
     
-    <summary type="html">&lt;pre&gt;&lt;code&gt;# 单例模式&lt;/code&gt;&lt;/pre&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;pre&gt;&lt;code&gt;# 单例模式&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/medias/JUC/DCL%E7%BA%BF%E7%A8%8B%E4%B8%8D%E5%AE%89%E5%85%A8.png&quot; alt=&quot;DCL线程不安全&quot;</summary>
+        
+      
     
     
     
     <category term="设计模式" scheme="https://xly5.gitee.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="JUC" scheme="https://xly5.gitee.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/JUC/"/>
     
     
     <category term="volatile" scheme="https://xly5.gitee.io/tags/volatile/"/>
@@ -45,7 +83,15 @@
     <updated>2020-10-27T04:02:09.328Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;GC的作用域&quot;&gt;&lt;a href=&quot;#GC的作用域&quot; class=&quot;headerlink&quot; title=&quot;GC的作用域&quot;&gt;&lt;/a&gt;GC的作用域&lt;/h1&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;GC的作用域&quot;&gt;&lt;a href=&quot;#GC的作用域&quot; class=&quot;headerlink&quot; title=&quot;GC的作用域&quot;&gt;&lt;/a&gt;GC的作用域&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;GC作用于方法区(Method Area)和堆(heap)&lt;/li&gt;
+&lt;li&gt;GC分为三个区</summary>
+        
+      
     
     
     
@@ -66,7 +112,13 @@
     <updated>2020-10-28T07:14:52.530Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;valatile是什么？&quot;&gt;&lt;a href=&quot;#valatile是什么？&quot; class=&quot;headerlink&quot; title=&quot;valatile是什么？&quot;&gt;&lt;/a&gt;valatile是什么？&lt;/h1&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;valatile是什么？&quot;&gt;&lt;a href=&quot;#valatile是什么？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
@@ -85,7 +137,13 @@
     <updated>2020-10-24T08:07:00.372Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;搭建博客需要node-js的npm和git环境&quot;&gt;&lt;a href=&quot;#搭建博客需要node-js的npm和git环境&quot; class=&quot;headerlink&quot; title=&quot;搭建博客需要node.js的npm和git环境&quot;&gt;&lt;/a&gt;搭建博客需要node.js的npm和git环境&lt;/h1&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;搭建博客需要node-js的npm和git环境&quot;&gt;&lt;a href=&quot;#搭建博客需要node-js的npm和git环境&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
