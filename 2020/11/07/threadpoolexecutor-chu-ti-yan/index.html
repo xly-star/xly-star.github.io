@@ -609,6 +609,9 @@ java.util.concurrent.RejectedExecutionException: Task com.xu.juc.threadpool.Trea
     at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
     at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
     at com.xu.juc.threadpool.TreadPoolDemo.main(TreadPoolDemo.java:21)
+
+
+
 </code></pre>
 </li>
 </ol>
@@ -616,128 +619,109 @@ java.util.concurrent.RejectedExecutionException: Task com.xu.juc.threadpool.Trea
 </ul>
 </li>
 </ol>
-<pre><code> 2. `CallerRunPolicy`:&quot;调用者执行&quot;一直调用机制,该策略既不会抛弃任务,也不会抛出异常,而是让发起请求者调用
-
-    示例:
-
-    ```
-    ExecutorService threadPool = new ThreadPoolExecutor(2 ,
-                                                        5,
-                                                        1L,
-                                                        TimeUnit.SECONDS,
-                                                        new LinkedBlockingQueue&lt;&gt;(3),
-                                                        Executors.defaultThreadFactory(),
-                                                        new ThreadPoolExecutor.CallerRunsPolicy());
-            try &#123;
-                for (int i = 0; i &lt; 10; i++) &#123;
-                    final int tempInt = i;
-                    threadPool.execute(() -&gt; &#123;
-                        System.out.println(Thread.currentThread().getName() + &quot;\t服务&quot; + (tempInt + 1));
-                    &#125;);
-                &#125;
-            &#125; catch (Exception e) &#123;
-                e.printStackTrace();
-            &#125; finally &#123;
-                threadPool.shutdown();
+<ol start="2">
+<li><p><code>CallerRunPolicy</code>:”调用者执行”一直调用机制,该策略既不会抛弃任务,也不会抛出异常,而是让发起请求者调用</p>
+<p>示例:</p>
+<pre><code>ExecutorService threadPool = new ThreadPoolExecutor(2 ,
+                                                    5,
+                                                    1L,
+                                                    TimeUnit.SECONDS,
+                                                    new LinkedBlockingQueue&lt;&gt;(3),
+                                                    Executors.defaultThreadFactory(),
+                                                    new ThreadPoolExecutor.CallerRunsPolicy());
+        try &#123;
+            for (int i = 0; i &lt; 10; i++) &#123;
+                final int tempInt = i;
+                threadPool.execute(() -&gt; &#123;
+                    System.out.println(Thread.currentThread().getName() + &quot;\t服务&quot; + (tempInt + 1));
+                &#125;);
             &#125;
-    ```
-
-    result:回调使main线程调用方法
-
-    ```
-    pool-1-thread-1    服务1
-    main    服务9
-    main    服务10
-    pool-1-thread-1    服务3
-    pool-1-thread-1    服务4
-    pool-1-thread-1    服务5
-    pool-1-thread-2    服务2
-    pool-1-thread-3    服务6
-    pool-1-thread-4    服务7
-    pool-1-thread-5    服务8
-    ```
-
-
-
- 3. `DiscardOldestPolicy`:抛弃任务队列中等待最久的任务,然后把当前任务加入队列中尝试再次提交
-
-    示例:
-
-    ```
-    ExecutorService threadPool = new ThreadPoolExecutor(2 ,
-                                                        5,
-                                                        1L,
-                                                        TimeUnit.SECONDS,
-                                                        new LinkedBlockingQueue&lt;&gt;(3),
-                                                        Executors.defaultThreadFactory(),
-                                                        new ThreadPoolExecutor.DiscardOldestPolicy());
-            try &#123;
-                for (int i = 0; i &lt; 10; i++) &#123;
-                    final int tempInt = i;
-                    threadPool.execute(() -&gt; &#123;
-                        System.out.println(Thread.currentThread().getName() + &quot;\t服务&quot; + (tempInt + 1));
-                    &#125;);
-                &#125;
-            &#125; catch (Exception e) &#123;
-                e.printStackTrace();
-            &#125; finally &#123;
-                threadPool.shutdown();
+        &#125; catch (Exception e) &#123;
+            e.printStackTrace();
+        &#125; finally &#123;
+            threadPool.shutdown();
+        &#125;</code></pre>
+</li>
+</ol>
+<p>result:回调使main线程调用方法</p>
+<pre><code> ```
+ pool-1-thread-1    服务1
+ main    服务9
+ main    服务10
+ pool-1-thread-1    服务3
+ pool-1-thread-1    服务4
+ pool-1-thread-1    服务5
+ pool-1-thread-2    服务2
+ pool-1-thread-3    服务6
+ pool-1-thread-4    服务7
+ pool-1-thread-5    服务8</code></pre>
+<ol start="3">
+<li><p><code>DiscardOldestPolicy</code>:抛弃任务队列中等待最久的任务,然后把当前任务加入队列中尝试再次提交</p>
+<p>示例:</p>
+<pre><code>ExecutorService threadPool = new ThreadPoolExecutor(2 ,
+                                                    5,
+                                                    1L,
+                                                    TimeUnit.SECONDS,
+                                                    new LinkedBlockingQueue&lt;&gt;(3),
+                                                    Executors.defaultThreadFactory(),
+                                                    new ThreadPoolExecutor.DiscardOldestPolicy());
+        try &#123;
+            for (int i = 0; i &lt; 10; i++) &#123;
+                final int tempInt = i;
+                threadPool.execute(() -&gt; &#123;
+                    System.out.println(Thread.currentThread().getName() + &quot;\t服务&quot; + (tempInt + 1));
+                &#125;);
             &#125;
-    ```
-
-    result:只有八个结果等待最久的两个请求被丢弃
-
-    ```
-    pool-1-thread-1    服务1
-    pool-1-thread-2    服务2
-    pool-1-thread-2    服务5
-    pool-1-thread-2    服务9
-    pool-1-thread-2    服务10
-    pool-1-thread-3    服务6
-    pool-1-thread-5    服务8
-    pool-1-thread-4    服务7
-    ```
-
-
-
- 4. `DiscardPolicy`:直接丢弃任务,不给予任何处理也不抛出异常.如果允许任务丢失,这是最好的拒绝策略
-
-    示例:
-
-    ```
-    ExecutorService threadPool = new ThreadPoolExecutor(2 ,
-                                                        5,
-                                                        1L,
-                                                        TimeUnit.SECONDS,
-                                                        new LinkedBlockingQueue&lt;&gt;(3),
-                                                        Executors.defaultThreadFactory(),
-                                                        new ThreadPoolExecutor.DiscardPolicy());
-            try &#123;
-                for (int i = 0; i &lt; 10; i++) &#123;
-                    final int tempInt = i;
-                    threadPool.execute(() -&gt; &#123;
-                        System.out.println(Thread.currentThread().getName() + &quot;\t服务&quot; + (tempInt + 1));
-                    &#125;);
-                &#125;
-            &#125; catch (Exception e) &#123;
-                e.printStackTrace();
-            &#125; finally &#123;
-                threadPool.shutdown();
-            &#125;
-    ```
-
-    result:只有八个请求被服务，后面到的请求直接被抛弃,不给予处理
-
-    ```
-    pool-1-thread-1    服务1
-    pool-1-thread-1    服务3
-    pool-1-thread-1    服务4
-    pool-1-thread-1    服务5
-    pool-1-thread-2    服务2
-    pool-1-thread-4    服务7
-    pool-1-thread-3    服务6
-    pool-1-thread-5    服务8
-    ```</code></pre>
+        &#125; catch (Exception e) &#123;
+            e.printStackTrace();
+        &#125; finally &#123;
+            threadPool.shutdown();
+        &#125;</code></pre>
+</li>
+</ol>
+<p>result:只有八个结果等待最久的两个请求被丢弃</p>
+<pre><code> ```
+ pool-1-thread-1    服务1
+ pool-1-thread-2    服务2
+ pool-1-thread-2    服务5
+ pool-1-thread-2    服务9
+ pool-1-thread-2    服务10
+ pool-1-thread-3    服务6
+ pool-1-thread-5    服务8
+ pool-1-thread-4    服务7</code></pre>
+<ol start="4">
+<li><code>DiscardPolicy</code>:直接丢弃任务,不给予任何处理也不抛出异常.如果允许任务丢失,这是最好的拒绝策略</li>
+</ol>
+<p>示例:</p>
+<pre><code> ```
+ ExecutorService threadPool = new ThreadPoolExecutor(2 ,
+                                                     5,
+                                                     1L,
+                                                     TimeUnit.SECONDS,
+                                                     new LinkedBlockingQueue&lt;&gt;(3),
+                                                     Executors.defaultThreadFactory(),
+                                                     new ThreadPoolExecutor.DiscardPolicy());
+         try &#123;
+             for (int i = 0; i &lt; 10; i++) &#123;
+                 final int tempInt = i;
+                 threadPool.execute(() -&gt; &#123;
+                     System.out.println(Thread.currentThread().getName() + &quot;\t服务&quot; + (tempInt + 1));
+                 &#125;);
+             &#125;
+         &#125; catch (Exception e) &#123;
+             e.printStackTrace();
+         &#125; finally &#123;
+             threadPool.shutdown();
+         &#125;</code></pre>
+<p>result:只有八个请求被服务，后面到的请求直接被抛弃,不给予处理</p>
+<pre><code> pool-1-thread-1    服务1
+ pool-1-thread-1    服务3
+ pool-1-thread-1    服务4
+ pool-1-thread-1    服务5
+ pool-1-thread-2    服务2
+ pool-1-thread-4    服务7
+ pool-1-thread-3    服务6
+ pool-1-thread-5    服务8</code></pre>
 <p>线程池底层工作原理：</p>
 <ol>
 <li>在创建了线程池后，线程池中的线程数为零。</li>
@@ -749,8 +733,10 @@ java.util.concurrent.RejectedExecutionException: Task com.xu.juc.threadpool.Trea
 </ol>
 </li>
 <li>当一个线程完成任务时，它会从队列中取下一个任务来执行。</li>
-<li>当一个线程无事可做超过一定的时间（<code>keepAliveTime</code>）时，线程会判断：<pre><code>如果当前运行的线程数大于`corePoolSize`，那么这个线程就被停掉。
-所以线程池的所有任务完成后，它最终会收缩到`corePoolSize`的大小。</code></pre>
+<li>当一个线程无事可做超过一定的时间（<code>keepAliveTime</code>）时，线程会判断：<ol>
+<li>如果当前运行的线程数大于<code>corePoolSize</code>，那么这个线程就被停掉。</li>
+<li>所以线程池的所有任务完成后，它最终会收缩到<code>corePoolSize</code>的大小。</li>
+</ol>
 </li>
 </ol>
 <h2 id="合理配置线程池"><a href="#合理配置线程池" class="headerlink" title="合理配置线程池"></a>合理配置线程池</h2><h2 id="cpu密集型"><a href="#cpu密集型" class="headerlink" title="cpu密集型:"></a><code>cpu</code>密集型:</h2><ul>
@@ -1358,7 +1344,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11k</span>&nbsp;字
+                class="white-color">10.9k</span>&nbsp;字
             
             
             
