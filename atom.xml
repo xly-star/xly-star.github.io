@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2020-11-09T12:28:17.759Z</updated>
+  <updated>2020-11-10T03:10:01.056Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GCRoot</title>
+    <link href="https://xly5.gitee.io/2020/11/10/gcroot/"/>
+    <id>https://xly5.gitee.io/2020/11/10/gcroot/</id>
+    <published>2020-11-10T02:58:56.000Z</published>
+    <updated>2020-11-10T03:10:01.056Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/medias/GC/GCRoot.png&quot; alt=&quot;GCRoot&quot; title=&quot;GCRoot&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="GC" scheme="https://xly5.gitee.io/categories/GC/"/>
+    
+    
+    <category term="GCRoot" scheme="https://xly5.gitee.io/tags/GCRoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>四大引用</title>
+    <link href="https://xly5.gitee.io/2020/11/10/si-da-yin-yong/"/>
+    <id>https://xly5.gitee.io/2020/11/10/si-da-yin-yong/</id>
+    <published>2020-11-10T02:40:45.000Z</published>
+    <updated>2020-11-10T02:58:08.585Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;强引用&quot;&gt;&lt;a href=&quot;#强引用&quot; class=&quot;headerlink&quot; title=&quot;强引用&quot;&gt;&lt;/a&gt;强引用&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="-GC" scheme="https://xly5.gitee.io/categories/GC/"/>
+    
+    
+    <category term="引用类型" scheme="https://xly5.gitee.io/tags/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>JVM常用基础参数</title>
@@ -37,8 +75,8 @@
   
   <entry>
     <title>JVM参数</title>
-    <link href="https://xly5.gitee.io/2020/11/09/java-ming-ling/"/>
-    <id>https://xly5.gitee.io/2020/11/09/java-ming-ling/</id>
+    <link href="https://xly5.gitee.io/2020/11/09/jvm-can-shu/"/>
+    <id>https://xly5.gitee.io/2020/11/09/jvm-can-shu/</id>
     <published>2020-11-09T07:14:56.000Z</published>
     <updated>2020-11-09T08:22:52.622Z</updated>
     

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ABA问题, HTML,CSS,JavaScript,JQuery,Java,Spring等">
+    <meta name="keywords" content="GCRoot, HTML,CSS,JavaScript,JQuery,Java,Spring等">
     <meta name="description" content="专注web">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ABA问题 | 博客</title>
+    <title>GCRoot | 博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -289,12 +289,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ABA问题</h1>
+                    <h1 class="description center-align post-title">GCRoot</h1>
                 </div>
             </div>
         </div>
@@ -411,12 +411,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CAS/">
-                                <span class="chip bg-color">CAS</span>
-                            </a>
-                        
-                            <a href="/tags/ABA/">
-                                <span class="chip bg-color">ABA</span>
+                            <a href="/tags/GCRoot/">
+                                <span class="chip bg-color">GCRoot</span>
                             </a>
                         
                     </div>
@@ -427,12 +423,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JUC/" class="post-category">
-                                JUC
-                            </a>
-                        
-                            <a href="/categories/JUC/ABA/" class="post-category">
-                                ABA
+                            <a href="/categories/GC/" class="post-category">
+                                GC
                             </a>
                         
                     </div>
@@ -444,28 +436,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-29
+                    2020-11-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-07
+                    2020-11-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    521
+                    130
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -480,91 +472,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="ABA问题的产生"><a href="#ABA问题的产生" class="headerlink" title="ABA问题的产生"></a>ABA问题的产生</h1><p><img src="/medias/JUC/ABA%E9%97%AE%E9%A2%98%E7%9A%84%E4%BA%A7%E7%94%9F.png" alt="ABA问题的产生" title="ABA问题的产生"></p>
+                <p><img src="/medias/GC/GCRoot.png" alt="GCRoot" title="GCRoot"></p>
+<p>软引用一半回收一半不回收，内存满回收，在垃圾回收的灰框内就是回收的引用，外面就是不回收的引用</p>
 <ul>
-<li><p>解决</p>
-<p>使用原子引用，增加版本（类似与乐观锁）。使用atomic包中的<code>AtomicStampedReference</code>类解决ABA问题，业务逻辑允许也可以不解决ABA</p>
+<li><p><code>GCRoot</code>:枚举根节点做可达性分析（根搜索路径）</p>
 </li>
-<li><p>代码示例：</p>
-<pre><code>package com.xu.juc;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.atomic.AtomicStampedReference;
-
-/**
- * @author xulingyun
- * @create 2020-10-29 18:21
- */
-public class ABADemo &#123;
-    static AtomicReference&lt;Integer&gt; atomicReference = new AtomicReference&lt;&gt;(100);
-    static AtomicStampedReference&lt;Integer&gt; atomicStampedReference = new AtomicStampedReference&lt;&gt;(100, 1);
-
-    public static void main(String[] args) &#123;
-        System.out.println(&quot;==========ABA的产生==========&quot;);
-        new Thread(() -&gt; &#123;
-            atomicReference.compareAndSet(100, 101);
-            atomicReference.compareAndSet(101, 100);
-        &#125;, &quot;t1&quot;).start();
-
-        new Thread(() -&gt; &#123;
-            //睡眠一秒让t1线程进行一次ABA
-            try &#123;
-                TimeUnit.SECONDS.sleep(1);
-            &#125; catch (InterruptedException e) &#123;
-                e.printStackTrace();
-            &#125;
-            boolean flag = atomicReference.compareAndSet(100, 2020);
-            System.out.println(Thread.currentThread().getName() + &quot;\t&quot; + flag + &quot;修改后的值：&quot; + atomicReference);
-        &#125;, &quot;t2&quot;).start();
-
-        try &#123;
-            TimeUnit.SECONDS.sleep(2);
-        &#125; catch (InterruptedException e) &#123;
-            e.printStackTrace();
-        &#125;
-        System.out.println(&quot;==========ABA的解决==========&quot;);
-        new Thread(() -&gt; &#123;
-            int stamp = atomicStampedReference.getStamp();
-            System.out.println(Thread.currentThread().getName() + &quot;第一次版本号：&quot; + stamp);
-            //睡眠一秒使t4获取相同的stamp
-            try &#123;
-                TimeUnit.SECONDS.sleep(1);
-            &#125; catch (InterruptedException e) &#123;
-                e.printStackTrace();
-            &#125;
-            atomicStampedReference.compareAndSet(100, 101, atomicStampedReference.getStamp(), atomicStampedReference.getStamp() + 1);
-            System.out.println(Thread.currentThread().getName() + &quot;第二次版本号：&quot; + atomicStampedReference.getStamp());
-            atomicStampedReference.compareAndSet(101, 100, atomicStampedReference.getStamp(), atomicStampedReference.getStamp() + 1);
-            System.out.println(Thread.currentThread().getName() + &quot;第三次版本号：&quot; + atomicStampedReference.getStamp());
-        &#125;, &quot;t3&quot;).start();
-
-        new Thread(() -&gt; &#123;
-            int stamp = atomicStampedReference.getStamp();
-            System.out.println(Thread.currentThread().getName() + &quot;第一次版本号：&quot; + stamp);
-            //睡眠三秒让t3线程执行完ABA
-            try &#123;
-                TimeUnit.SECONDS.sleep(3);
-            &#125; catch (InterruptedException e) &#123;
-                e.printStackTrace();
-            &#125;
-            boolean flag = atomicStampedReference.compareAndSet(100, 2020, stamp, stamp + 1);
-            System.out.println(Thread.currentThread().getName() + &quot;当前修改是否成功：&quot; + flag + &quot;\t最终atomicStampedReference值:&quot; + atomicStampedReference.getReference());
-
-        &#125;, &quot;t4&quot;).start();
-    &#125;
-&#125;
-</code></pre>
-<p><code>result</code>:</p>
-<pre><code>==========ABA的产生==========
-t2    true修改后的值：2020
-==========ABA的解决==========
-t3第一次版本号：1
-t4第一次版本号：1
-t3第二次版本号：2
-t3第三次版本号：3
-t4当前修改是否成功：false    最终atomicStampedReference值:100</code></pre>
-<p>第一次没有加版本控制产生ABA问题，第二次使用了<code>AtomicStampedReference</code>类解决了ABA问题，类似于乐观锁加上版本号解决ABA。</p>
+<li><p>Java中可以作为<code>GC Roots</code> 的对象</p>
+<ol>
+<li>虚拟机栈(栈帧中的局部变量区,也叫局部变量)</li>
+<li>方法区中的类静态属性引用对象</li>
+<li>方法区中的常量引用对象</li>
+<li>本地方法栈中的<code>JNI</code>(Native方法)引用的对象</li>
+</ol>
 </li>
 </ul>
 
@@ -592,7 +511,7 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xly5.gitee.io/2020/10/29/aba-wen-ti/">https://xly5.gitee.io/2020/10/29/aba-wen-ti/</a>
+                    <a href="https://xly5.gitee.io/2020/11/10/gcroot/">https://xly5.gitee.io/2020/11/10/gcroot/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,12 +549,8 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CAS/">
-                                    <span class="chip bg-color">CAS</span>
-                                </a>
-                            
-                                <a href="/tags/ABA/">
-                                    <span class="chip bg-color">ABA</span>
+                                <a href="/tags/GCRoot/">
+                                    <span class="chip bg-color">GCRoot</span>
                                 </a>
                             
                         </div>
@@ -849,74 +764,48 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/07/si-chong-suo-de-ren-shi/">
+                <a href="/2020/11/10/gcroot/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="四种锁的认识">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="GCRoot">
                         
-                        <span class="card-title">四种锁的认识</span>
+                        <span class="card-title">GCRoot</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            公平锁和非公平锁
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JUC/" class="post-category">
-                                    JUC
-                                </a>
-                            
-                            <a href="/categories/JUC/%E9%94%81/" class="post-category">
-                                    锁
+                            <a href="/categories/GC/" class="post-category">
+                                    GC
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%85%AC%E5%B9%B3%E9%94%81/">
-                        <span class="chip bg-color">公平锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%81/">
-                        <span class="chip bg-color">非公平锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81/">
-                        <span class="chip bg-color">可重入锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%80%92%E5%BD%92%E9%94%81/">
-                        <span class="chip bg-color">递归锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%87%AA%E6%97%8B%E9%94%81/">
-                        <span class="chip bg-color">自旋锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%8B%AC%E5%8D%A0%E9%94%81-%E5%86%99%E9%94%81/">
-                        <span class="chip bg-color">独占锁(写锁)</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%85%B1%E4%BA%AB%E9%94%81-%E8%AF%BB%E9%94%81/">
-                        <span class="chip bg-color">共享锁(读锁)</span>
+                    <a href="/tags/GCRoot/">
+                        <span class="chip bg-color">GCRoot</span>
                     </a>
                     
                 </div>
@@ -930,35 +819,31 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/29/cas-de-di-ceng-fen-xi/">
+                <a href="/2020/11/10/si-da-yin-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="CAS的底层分析">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="四大引用">
                         
-                        <span class="card-title">CAS的底层分析</span>
+                        <span class="card-title">四大引用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CAS (Compare And Swap)比较交换
+                            强引用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JUC/" class="post-category">
-                                    JUC
-                                </a>
-                            
-                            <a href="/categories/JUC/cpu%E5%8E%9F%E8%AF%AD/" class="post-category">
-                                    cpu原语
+                            <a href="/categories/GC/" class="post-category">
+                                    -GC
                                 </a>
                             
                             
@@ -968,12 +853,8 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CAS/">
-                        <span class="chip bg-color">CAS</span>
-                    </a>
-                    
-                    <a href="/tags/unsafe/">
-                        <span class="chip bg-color">unsafe</span>
+                    <a href="/tags/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">
+                        <span class="chip bg-color">引用类型</span>
                     </a>
                     
                 </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ABA问题, HTML,CSS,JavaScript,JQuery,Java,Spring等">
+    <meta name="keywords" content="JVM参数, HTML,CSS,JavaScript,JQuery,Java,Spring等">
     <meta name="description" content="专注web">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ABA问题 | 博客</title>
+    <title>JVM参数 | 博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -289,12 +289,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ABA问题</h1>
+                    <h1 class="description center-align post-title">JVM参数</h1>
                 </div>
             </div>
         </div>
@@ -411,12 +411,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CAS/">
-                                <span class="chip bg-color">CAS</span>
-                            </a>
-                        
-                            <a href="/tags/ABA/">
-                                <span class="chip bg-color">ABA</span>
+                            <a href="/tags/JVM%E5%8F%82%E6%95%B0/">
+                                <span class="chip bg-color">JVM参数</span>
                             </a>
                         
                     </div>
@@ -427,12 +423,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JUC/" class="post-category">
-                                JUC
-                            </a>
-                        
-                            <a href="/categories/JUC/ABA/" class="post-category">
-                                ABA
+                            <a href="/categories/JVM/" class="post-category">
+                                JVM
                             </a>
                         
                     </div>
@@ -444,28 +436,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-29
+                    2020-11-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-07
+                    2020-11-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    521
+                    455
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -480,92 +472,46 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="ABA问题的产生"><a href="#ABA问题的产生" class="headerlink" title="ABA问题的产生"></a>ABA问题的产生</h1><p><img src="/medias/JUC/ABA%E9%97%AE%E9%A2%98%E7%9A%84%E4%BA%A7%E7%94%9F.png" alt="ABA问题的产生" title="ABA问题的产生"></p>
+                <h1 id="JVM的三个参数类型"><a href="#JVM的三个参数类型" class="headerlink" title="JVM的三个参数类型"></a>JVM的三个参数类型</h1><h2 id="JVM的标配参数"><a href="#JVM的标配参数" class="headerlink" title="JVM的标配参数"></a>JVM的标配参数</h2><ol>
+<li><p>java -version</p>
+</li>
+<li><p>java -help</p>
+</li>
+<li><p>java -showversion</p>
+<p>没有随着版本变化变化</p>
+</li>
+</ol>
+<h2 id="X参数"><a href="#X参数" class="headerlink" title="X参数"></a>X参数</h2><ol>
+<li>-Xint: 解释执行</li>
+<li>-Xcomp:第一次使用就编译成本地代码</li>
+<li>-Xmixed(默认):混合模式</li>
+</ol>
+<h2 id="XX参数"><a href="#XX参数" class="headerlink" title="XX参数"></a>XX参数</h2><h3 id="Boolean类型的XX参数"><a href="#Boolean类型的XX参数" class="headerlink" title="Boolean类型的XX参数"></a>Boolean类型的XX参数</h3><p>-XX:+或者-某个属性值(+代表开启-代表关闭)</p>
 <ul>
-<li><p>解决</p>
-<p>使用原子引用，增加版本（类似与乐观锁）。使用atomic包中的<code>AtomicStampedReference</code>类解决ABA问题，业务逻辑允许也可以不解决ABA</p>
+<li>jps -l : 查看java程序的进程号</li>
+<li>jstack 进程号 : 可以查看某个进程号的运行情况,检查死锁</li>
+<li>jinfo -flag PrintDGDetails 进程号:查看是否开启打印GC细节 ;   jinfo -flag  UseSerialGC 3000:是否使用串行垃圾收集器</li>
+<li>jinfo -flags 进程号: 可以查看JVM的一些基本参数值</li>
+</ul>
+<h3 id="KV型XX参数"><a href="#KV型XX参数" class="headerlink" title="KV型XX参数"></a>KV型XX参数</h3><p>-XX:属性key=属性值value</p>
+<ul>
+<li><p>jinfo -flag MetaspaceSize 进程号: 查看元空间大小            result: -XX:MetaspaceSize=536870912(修改过),在vm option上写入了</p>
+<p>-XX:+PrintGCDetails -XX:MetaspaceSize=512m</p>
 </li>
-<li><p>代码示例：</p>
-<pre><code>package com.xu.juc;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.atomic.AtomicStampedReference;
-
-/**
- * @author xulingyun
- * @create 2020-10-29 18:21
- */
-public class ABADemo &#123;
-    static AtomicReference&lt;Integer&gt; atomicReference = new AtomicReference&lt;&gt;(100);
-    static AtomicStampedReference&lt;Integer&gt; atomicStampedReference = new AtomicStampedReference&lt;&gt;(100, 1);
-
-    public static void main(String[] args) &#123;
-        System.out.println(&quot;==========ABA的产生==========&quot;);
-        new Thread(() -&gt; &#123;
-            atomicReference.compareAndSet(100, 101);
-            atomicReference.compareAndSet(101, 100);
-        &#125;, &quot;t1&quot;).start();
-
-        new Thread(() -&gt; &#123;
-            //睡眠一秒让t1线程进行一次ABA
-            try &#123;
-                TimeUnit.SECONDS.sleep(1);
-            &#125; catch (InterruptedException e) &#123;
-                e.printStackTrace();
-            &#125;
-            boolean flag = atomicReference.compareAndSet(100, 2020);
-            System.out.println(Thread.currentThread().getName() + &quot;\t&quot; + flag + &quot;修改后的值：&quot; + atomicReference);
-        &#125;, &quot;t2&quot;).start();
-
-        try &#123;
-            TimeUnit.SECONDS.sleep(2);
-        &#125; catch (InterruptedException e) &#123;
-            e.printStackTrace();
-        &#125;
-        System.out.println(&quot;==========ABA的解决==========&quot;);
-        new Thread(() -&gt; &#123;
-            int stamp = atomicStampedReference.getStamp();
-            System.out.println(Thread.currentThread().getName() + &quot;第一次版本号：&quot; + stamp);
-            //睡眠一秒使t4获取相同的stamp
-            try &#123;
-                TimeUnit.SECONDS.sleep(1);
-            &#125; catch (InterruptedException e) &#123;
-                e.printStackTrace();
-            &#125;
-            atomicStampedReference.compareAndSet(100, 101, atomicStampedReference.getStamp(), atomicStampedReference.getStamp() + 1);
-            System.out.println(Thread.currentThread().getName() + &quot;第二次版本号：&quot; + atomicStampedReference.getStamp());
-            atomicStampedReference.compareAndSet(101, 100, atomicStampedReference.getStamp(), atomicStampedReference.getStamp() + 1);
-            System.out.println(Thread.currentThread().getName() + &quot;第三次版本号：&quot; + atomicStampedReference.getStamp());
-        &#125;, &quot;t3&quot;).start();
-
-        new Thread(() -&gt; &#123;
-            int stamp = atomicStampedReference.getStamp();
-            System.out.println(Thread.currentThread().getName() + &quot;第一次版本号：&quot; + stamp);
-            //睡眠三秒让t3线程执行完ABA
-            try &#123;
-                TimeUnit.SECONDS.sleep(3);
-            &#125; catch (InterruptedException e) &#123;
-                e.printStackTrace();
-            &#125;
-            boolean flag = atomicStampedReference.compareAndSet(100, 2020, stamp, stamp + 1);
-            System.out.println(Thread.currentThread().getName() + &quot;当前修改是否成功：&quot; + flag + &quot;\t最终atomicStampedReference值:&quot; + atomicStampedReference.getReference());
-
-        &#125;, &quot;t4&quot;).start();
-    &#125;
-&#125;
-</code></pre>
-<p><code>result</code>:</p>
-<pre><code>==========ABA的产生==========
-t2    true修改后的值：2020
-==========ABA的解决==========
-t3第一次版本号：1
-t4第一次版本号：1
-t3第二次版本号：2
-t3第三次版本号：3
-t4当前修改是否成功：false    最终atomicStampedReference值:100</code></pre>
-<p>第一次没有加版本控制产生ABA问题，第二次使用了<code>AtomicStampedReference</code>类解决了ABA问题，类似于乐观锁加上版本号解决ABA。</p>
+<li><p>jinfo -flag MaxTenuringThreshold 进程号：到达多少次GC可以进入养老区（默认15）</p>
 </li>
+<li><p>java -XX:+PrintFlagsInitial: 查看JVM参数的初始值</p>
+</li>
+<li><p>java -XX:+PrintFlagsFinal -version(或 .class文件名)：查看JVM最终参数 （=的是为修改的参数 :=是修改过的参数）相当于在运行时打开了打印最终参数的命令 可以写入多个XX参数 <strong>实际上就是运行java命令然后可以加上一些XX参数</strong></p>
+</li>
+<li><p>java -XX:+PrintCommandLineFlags -version(或 .class文件名)： 查看一些基本的JVM参数值，<strong>主要是为了查看使用的GC垃圾收集器是什么</strong></p>
+</li>
+</ul>
+<p><strong>提示</strong></p>
+<ul>
+<li>-Xms：是-XX:InitialHeapSize的缩写</li>
+<li>-Xmx：是-XX:MaxHeapSize的缩写</li>
+<li>所以他们两个参数是XX型参数（这两个值一般设为一样在生产环境，防止GC次数多）在很多情况下，-Xms和-Xmx设置成一样的。这么设置，是因为当Heap不够用时，会发生内存抖动，影响程序运行稳定性</li>
 </ul>
 
             </div>
@@ -592,7 +538,7 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xly5.gitee.io/2020/10/29/aba-wen-ti/">https://xly5.gitee.io/2020/10/29/aba-wen-ti/</a>
+                    <a href="https://xly5.gitee.io/2020/11/09/jvm-can-shu/">https://xly5.gitee.io/2020/11/09/jvm-can-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,12 +576,8 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CAS/">
-                                    <span class="chip bg-color">CAS</span>
-                                </a>
-                            
-                                <a href="/tags/ABA/">
-                                    <span class="chip bg-color">ABA</span>
+                                <a href="/tags/JVM%E5%8F%82%E6%95%B0/">
+                                    <span class="chip bg-color">JVM参数</span>
                                 </a>
                             
                         </div>
@@ -853,35 +795,31 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/07/si-chong-suo-de-ren-shi/">
+                <a href="/2020/11/09/jvm-chang-yong-ji-chu-can-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="四种锁的认识">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="JVM常用基础参数">
                         
-                        <span class="card-title">四种锁的认识</span>
+                        <span class="card-title">JVM常用基础参数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            公平锁和非公平锁
+                            JVM常用参数
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-09
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JUC/" class="post-category">
-                                    JUC
-                                </a>
-                            
-                            <a href="/categories/JUC/%E9%94%81/" class="post-category">
-                                    锁
+                            <a href="/categories/JVM/" class="post-category">
+                                    JVM
                                 </a>
                             
                             
@@ -891,32 +829,8 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%85%AC%E5%B9%B3%E9%94%81/">
-                        <span class="chip bg-color">公平锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%81/">
-                        <span class="chip bg-color">非公平锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81/">
-                        <span class="chip bg-color">可重入锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%80%92%E5%BD%92%E9%94%81/">
-                        <span class="chip bg-color">递归锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%87%AA%E6%97%8B%E9%94%81/">
-                        <span class="chip bg-color">自旋锁</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%8B%AC%E5%8D%A0%E9%94%81-%E5%86%99%E9%94%81/">
-                        <span class="chip bg-color">独占锁(写锁)</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%85%B1%E4%BA%AB%E9%94%81-%E8%AF%BB%E9%94%81/">
-                        <span class="chip bg-color">共享锁(读锁)</span>
+                    <a href="/tags/JVM%E5%8F%82%E6%95%B0/">
+                        <span class="chip bg-color">JVM参数</span>
                     </a>
                     
                 </div>
@@ -930,24 +844,24 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/29/cas-de-di-ceng-fen-xi/">
+                <a href="/2020/11/07/threadpoolexecutor-chu-ti-yan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="CAS的底层分析">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="ThreadPoolExecutor初体验">
                         
-                        <span class="card-title">CAS的底层分析</span>
+                        <span class="card-title">ThreadPoolExecutor初体验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CAS (Compare And Swap)比较交换
+                            创建线程池的五个方法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
                             </span>
                         <span class="publish-author">
                             
@@ -957,10 +871,6 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                                     JUC
                                 </a>
                             
-                            <a href="/categories/JUC/cpu%E5%8E%9F%E8%AF%AD/" class="post-category">
-                                    cpu原语
-                                </a>
-                            
                             
                         </span>
                     </div>
@@ -968,12 +878,8 @@ t4当前修改是否成功：false    最终atomicStampedReference值:100</code>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CAS/">
-                        <span class="chip bg-color">CAS</span>
-                    </a>
-                    
-                    <a href="/tags/unsafe/">
-                        <span class="chip bg-color">unsafe</span>
+                    <a href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
+                        <span class="chip bg-color">线程池</span>
                     </a>
                     
                 </div>

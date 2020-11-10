@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JVM参数, HTML,CSS,JavaScript,JQuery,Java,Spring等">
+    <meta name="keywords" content="四大引用, HTML,CSS,JavaScript,JQuery,Java,Spring等">
     <meta name="description" content="专注web">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JVM参数 | 博客</title>
+    <title>四大引用 | 博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -294,7 +294,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JVM参数</h1>
+                    <h1 class="description center-align post-title">四大引用</h1>
                 </div>
             </div>
         </div>
@@ -411,8 +411,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JVM%E5%8F%82%E6%95%B0/">
-                                <span class="chip bg-color">JVM参数</span>
+                            <a href="/tags/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">
+                                <span class="chip bg-color">引用类型</span>
                             </a>
                         
                     </div>
@@ -423,8 +423,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JVM/" class="post-category">
-                                JVM
+                            <a href="/categories/GC/" class="post-category">
+                                -GC
                             </a>
                         
                     </div>
@@ -436,28 +436,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-09
+                    2020-11-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-09
+                    2020-11-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    455
+                    637
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -472,47 +472,124 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="JVM的三个参数类型"><a href="#JVM的三个参数类型" class="headerlink" title="JVM的三个参数类型"></a>JVM的三个参数类型</h1><h2 id="JVM的标配参数"><a href="#JVM的标配参数" class="headerlink" title="JVM的标配参数"></a>JVM的标配参数</h2><ol>
-<li><p>java -version</p>
-</li>
-<li><p>java -help</p>
-</li>
-<li><p>java -showversion</p>
-<p>没有随着版本变化变化</p>
-</li>
-</ol>
-<h2 id="X参数"><a href="#X参数" class="headerlink" title="X参数"></a>X参数</h2><ol>
-<li>-Xint: 解释执行</li>
-<li>-Xcomp:第一次使用就编译成本地代码</li>
-<li>-Xmixed(默认):混合模式</li>
-</ol>
-<h2 id="XX参数"><a href="#XX参数" class="headerlink" title="XX参数"></a>XX参数</h2><h3 id="Boolean类型的XX参数"><a href="#Boolean类型的XX参数" class="headerlink" title="Boolean类型的XX参数"></a>Boolean类型的XX参数</h3><p>-XX:+或者-某个属性值(+代表开启-代表关闭)</p>
-<ul>
-<li>jps -l : 查看java程序的进程号</li>
-<li>jstack 进程号 : 可以查看某个进程号的运行情况,检查死锁</li>
-<li>jinfo -flag PrintDGDetails 进程号:查看是否开启打印GC细节 ;   jinfo -flag  UseSerialGC 3000:是否使用串行垃圾收集器</li>
-<li>jinfo -flags 进程号: 可以查看JVM的一些基本参数值</li>
-</ul>
-<h3 id="KV型XX参数"><a href="#KV型XX参数" class="headerlink" title="KV型XX参数"></a>KV型XX参数</h3><p>-XX:属性key=属性值value</p>
-<ul>
-<li><p>jinfo -flag MetaspaceSize 进程号: 查看元空间大小            result: -XX:MetaspaceSize=536870912(修改过),在vm option上写入了</p>
-<p>-XX:+PrintGCDetails -XX:MetaspaceSize=512m</p>
-</li>
-<li><p>jinfo -flag MaxTenuringThreshold 进程号：到达多少次GC可以进入养老区（默认15）</p>
-</li>
-<li><p>java -XX:+PrintFlagsInitial: 查看JVM参数的初始值</p>
-</li>
-<li><p>java -XX:+PrintFlagsFinal -version(或 .class文件名)：查看JVM最终参数 （=的是为修改的参数 :=是修改过的参数）相当于在运行时打开了打印最终参数的命令 可以写入多个XX参数 <strong>实际上就是运行java命令然后可以加上一些XX参数</strong></p>
-</li>
-<li><p>java -XX:+PrintCommandLineFlags -version(或 .class文件名)： 查看一些基本的JVM参数值，<strong>主要是为了查看使用的GC垃圾收集器是什么</strong></p>
-</li>
-</ul>
-<p><strong>提示</strong></p>
-<ul>
-<li>-Xms：是-XX:InitialHeapSize的缩写</li>
-<li>-Xmx：是-XX:MaxHeapSize的缩写</li>
-<li>所以他们两个参数是XX型参数（这两个值一般设为一样在生产环境，防止GC次数多）在很多情况下，-Xms和-Xmx设置成一样的。这么设置，是因为当Heap不够用时，会发生内存抖动，影响程序运行稳定性</li>
-</ul>
+                <h1 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a>强引用</h1><p>强引用就算<code>oom</code>异常也不会被回收</p>
+<p>例子:</p>
+<pre><code>Object o1 = new Object();
+Object o2 = o1;
+o1 = null;
+System.gc();
+System.out.println(o2);</code></pre>
+<p>result: <code>java.lang.Object@677327b6</code></p>
+<h1 id="软引用"><a href="#软引用" class="headerlink" title="软引用"></a>软引用</h1><p>软引用在内存充足的时候不会被回收,在内存不足的时候回被回收</p>
+<p>内存充足例子:</p>
+<pre><code> Object o1 = new Object();
+ SoftReference&lt;Object&gt; softReference = new SoftReference&lt;&gt;(o1);
+ System.out.println(o1);
+ System.out.println(softReference.get());
+ o1 = null;
+ System.gc();
+ System.out.println(&quot;==================&quot;);
+ System.out.println(o1);
+ System.out.println(softReference.get());</code></pre>
+<p>result:</p>
+<pre><code>java.lang.Object@677327b6
+java.lang.Object@677327b6
+==================
+null
+java.lang.Object@677327b6</code></pre>
+<p>内存不足例子:(在<code>VM option</code>上加上<code>-Xms10m -Xmx10m</code>设置堆内存大小为<code>10m</code>):</p>
+<pre><code>  Object o1 = new Object();
+  SoftReference&lt;Object&gt; softReference = new SoftReference&lt;&gt;(o1);
+  System.out.println(o1);
+  System.out.println(softReference.get());
+  o1 = null;
+  try &#123;
+  //申请30m内存
+  byte[] bytes = new byte[10 * 1024 * 1024];
+  &#125; catch (Exception e) &#123;
+  e.printStackTrace();
+  &#125; finally &#123;
+  System.out.println(&quot;==================&quot;);
+  System.out.println(o1);
+  System.out.println(softReference.get());
+  &#125;</code></pre>
+<p>result:内存不足软引用被回收</p>
+<pre><code>java.lang.Object@677327b6
+java.lang.Object@677327b6
+==================
+null
+null
+Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Java heap space
+    at com.xu.juc.reference.ReferenceDemo.softReferenceNoMemoryNoOut(ReferenceDemo.java:75)
+    at com.xu.juc.reference.ReferenceDemo.main(ReferenceDemo.java:38)</code></pre>
+<h1 id="弱引用"><a href="#弱引用" class="headerlink" title="弱引用"></a>弱引用</h1><p>弱引用一旦发生<code>GC</code>就被回收</p>
+<p>例子:</p>
+<pre><code>Object o1 = new Object();
+WeakReference&lt;Object&gt; weakReference = new WeakReference&lt;&gt;(o1);
+System.out.println(o1);
+System.out.println(weakReference.get());
+o1 = null;
+System.gc();
+System.out.println(&quot;==================&quot;);
+System.out.println(o1);
+System.out.println(weakReference.get());</code></pre>
+<p>result:</p>
+<pre><code>java.lang.Object@677327b6
+java.lang.Object@677327b6
+==================
+null
+null</code></pre>
+<h1 id="虚引用"><a href="#虚引用" class="headerlink" title="虚引用"></a>虚引用</h1><p>虚引用的get方法总是返回<code>null</code>,虚引用需要和<code>ReferenceQueue</code>同时使用,在虚引用被回收前被回收的对象会被加入引用队列中,用来作为回收前的通知效果</p>
+<p>例子:</p>
+<pre><code>Object o1 = new Object();
+ReferenceQueue&lt;Object&gt; referenceQueue = new ReferenceQueue&lt;&gt;();
+PhantomReference&lt;Object&gt; phantomReference = new PhantomReference&lt;&gt;(o1,referenceQueue);
+System.out.println(o1);
+System.out.println(phantomReference.get());
+System.out.println(referenceQueue.poll());
+o1 = null;
+System.gc();
+System.out.println(&quot;==================&quot;);
+System.out.println(o1);
+System.out.println(phantomReference.get());
+System.out.println(referenceQueue.poll());</code></pre>
+<p>result:队列中有被回收的对象,虚引用中的get返回<code>null</code></p>
+<pre><code>java.lang.Object@677327b6
+null
+null
+==================
+null
+null
+java.lang.ref.PhantomReference@14ae5a5</code></pre>
+<h1 id="WeakHashMap"><a href="#WeakHashMap" class="headerlink" title="WeakHashMap"></a><code>WeakHashMap</code></h1><p><code>WeakHashMap</code>在key值不可用时<code>GC</code>将该key-value回收就是回收（Node）</p>
+<p>例子：</p>
+<pre><code>HashMap&lt;Integer, String&gt; map = new HashMap&lt;&gt;();
+Integer key = new Integer(1);
+String value = UUID.randomUUID().toString().replaceAll(&quot;-&quot;, &quot;&quot;);
+map.put(key, value);
+System.out.println(map);
+key = null;
+System.gc();
+System.out.println(map);
+
+
+System.out.println(&quot;=======================&quot;);
+
+
+WeakHashMap&lt;Integer, String&gt; weakHashMap = new WeakHashMap&lt;&gt;();
+Integer key1 = new Integer(1);
+String value1 = UUID.randomUUID().toString().replaceAll(&quot;-&quot;, &quot;&quot;);
+weakHashMap.put(key1, value1);
+System.out.println(weakHashMap);
+key1 = null;
+System.gc();
+System.out.println(weakHashMap);</code></pre>
+<p>result:<code>key</code>为<code>null</code>而map中的值不会变为<code>null</code>,map中的值时存储在<code>Node</code>节点中的</p>
+<pre><code>&#123;1=1c4f08765c6e4417a72ed8b09bc16de8&#125;
+&#123;1=1c4f08765c6e4417a72ed8b09bc16de8&#125;
+=======================
+&#123;1=6d39fb7b374942d98cb186a5c81a1594&#125;
+&#123;&#125;</code></pre>
 
             </div>
             <hr/>
@@ -538,7 +615,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xly5.gitee.io/2020/11/09/java-ming-ling/">https://xly5.gitee.io/2020/11/09/java-ming-ling/</a>
+                    <a href="https://xly5.gitee.io/2020/11/10/si-da-yin-yong/">https://xly5.gitee.io/2020/11/10/si-da-yin-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,8 +653,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JVM%E5%8F%82%E6%95%B0/">
-                                    <span class="chip bg-color">JVM参数</span>
+                                <a href="/tags/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">
+                                    <span class="chip bg-color">引用类型</span>
                                 </a>
                             
                         </div>
@@ -795,6 +872,55 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/11/10/gcroot/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="GCRoot">
+                        
+                        <span class="card-title">GCRoot</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/GC/" class="post-category">
+                                    GC
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/GCRoot/">
+                        <span class="chip bg-color">GCRoot</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/11/09/jvm-chang-yong-ji-chu-can-shu/">
                     <div class="card-image">
                         
@@ -811,9 +937,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -831,55 +957,6 @@
                     
                     <a href="/tags/JVM%E5%8F%82%E6%95%B0/">
                         <span class="chip bg-color">JVM参数</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/11/07/threadpoolexecutor-chu-ti-yan/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="ThreadPoolExecutor初体验">
-                        
-                        <span class="card-title">ThreadPoolExecutor初体验</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            创建线程池的五个方法
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JUC/" class="post-category">
-                                    JUC
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
-                        <span class="chip bg-color">线程池</span>
                     </a>
                     
                 </div>
@@ -1086,7 +1163,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.2k</span>&nbsp;字
+                class="white-color">13k</span>&nbsp;字
             
             
             
