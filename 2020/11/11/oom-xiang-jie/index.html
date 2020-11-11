@@ -1,0 +1,1373 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="OOM详解, HTML,CSS,JavaScript,JQuery,Java,Spring等">
+    <meta name="description" content="专注web">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>OOM详解 | 博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">博客</div>
+        <div class="logo-desc">
+            
+            专注web
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/xly-star" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/xly-star" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">OOM详解</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/OOM/">
+                                <span class="chip bg-color">OOM</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/OOM/" class="post-category">
+                                OOM
+                            </a>
+                        
+                            <a href="/categories/OOM/Exception/" class="post-category">
+                                Exception
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-11-11
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-11-11
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    16 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="常见的OOM-Out-Of-Memory"><a href="#常见的OOM-Out-Of-Memory" class="headerlink" title="常见的OOM(Out Of Memory)"></a>常见的<code>OOM</code>(Out Of Memory)</h1><ol>
+<li><p><code>java.lang.OutOfMemoryError: Java heap space</code>: <code>java</code>堆溢出</p>
+<p>代码示例(在<code>vm option</code>上设置<code>-Xms10m -Xmx10m</code>堆的最大内存和初始内存都为<code>10m</code>):</p>
+<pre><code>public class JavaHeapSpaceDemo &#123;
+    public static void main(String[] args) &#123;
+        //申请30m大对象
+        byte[] bytes = new byte[30 * 1024 * 1024];
+        //Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Java heap space
+    &#125;
+&#125;</code></pre>
+<p>result:`Exception in thread “main” java.lang.OutOfMemoryError: Java heap space</p>
+<pre><code>at com.xu.juc.oom.JavaHeapSpaceDemo.main(JavaHeapSpaceDemo.java:9)`</code></pre>
+</li>
+<li><p><code>java.lang.OutOfMemoryError: unable to create new native thread</code>:单个进程创建的线程数达到最大,<code>linux</code>默认是1024</p>
+<p>代码示例:</p>
+<pre><code>public class UnableCreateNewNativeThreadDemo &#123;
+    public static void main(String[] args) &#123;
+        int i = 0;
+        while (true)&#123;
+            i++;
+            new Thread(()-&gt;&#123;
+                 try &#123;
+                    TimeUnit.SECONDS.sleep(Integer.MAX_VALUE);
+                 &#125; catch (InterruptedException e) &#123;
+                    e.printStackTrace();
+                 &#125;
+            &#125;,&quot;t1&quot;).start();
+            System.out.println(&quot;i=&quot;+i);
+            //Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: unable to create new native thread
+        &#125;
+    &#125;
+&#125;</code></pre>
+<p>result:</p>
+<pre><code>Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: unable to create new native thread
+    at java.lang.Thread.start0(Native Method)
+    at java.lang.Thread.start(Thread.java:717)
+    at com.xu.juc.oom.UnableCreateNewNativeThreadDemo.main(UnableCreateNewNativeThreadDemo.java:20)</code></pre>
+<p>解决方法:在<code>linux</code>下执行<code>ulimit -u</code>命令查看单进程的最大线程数root用户不限制,需要修改最大线程数</p>
+<p><code>vim /etc/security/limits.d/20-nproc.conf</code> 在末尾加上<code>用户名 soft nproc 需要的线程数</code></p>
+</li>
+<li><p><code>java.lang.OutOfMemoryError: Direct buffer memory</code>:最大直接内存溢出,在<code>JVM</code>堆外的内存,元空间就是在那里,<code>NIO</code>可以在直接内存申请对象,而直接内存不归<code>GC</code>管,没有垃圾回收,所以<code>NIO</code>很容易导致这个异常</p>
+<p>代码示例(在<code>vm option</code>上设置<code>-XX:MaxDirectMemorySize=5m</code>最大直接内存为<code>5m</code>):</p>
+<pre><code>public class DirectBufferMemoryDemo &#123;
+    public static void main(String[] args) &#123;
+        System.out.println(&quot;配置的MaxDirectMemory： &quot; + (sun.misc.VM.maxDirectMemory()/(double)1024/1024) + &quot;MB&quot;);
+        try &#123;
+           TimeUnit.SECONDS.sleep(3);
+        &#125; catch (InterruptedException e) &#123;
+           e.printStackTrace();
+        &#125;
+        //-XX:MaxDirectMemorySize=5m 我们配置为5MB，但实际使用6MB
+        ByteBuffer bb = ByteBuffer.allocateDirect(6*1024*1024);
+        //Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Direct buffer memory
+    &#125;
+&#125;</code></pre>
+<p>result:</p>
+<pre><code>配置的MaxDirectMemory： 5.0MB
+Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Direct buffer memory
+    at java.nio.Bits.reserveMemory(Bits.java:694)
+    at java.nio.DirectByteBuffer.&lt;init&gt;(DirectByteBuffer.java:123)
+    at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:311)
+    at com.xu.juc.oom.DirectBufferMemoryDemo.main(DirectBufferMemoryDemo.java:19)</code></pre>
+</li>
+</ol>
+<p>4.<code>Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Metaspace</code>:元空间内存溢出,静态对象过多</p>
+<p>代码示例(在<code>vm option</code>上设置<code>-XX:MetaspaceSize=10m -XX:MaxMetaspaceSize=10m</code>最大元空间内存为<code>10m</code>且需要导入两个jar包<code>asm-2.2.3.jar</code>和<code>cglib-nodep-2.2.2</code>):</p>
+<pre><code>public class MetaspaceSizeDemo &#123;
+    static class OOMTest &#123;
+    &#125;
+
+    public static void main(String[] args) &#123;
+        int i = 0;
+
+        try &#123;
+            while (true) &#123;
+                i++;
+                Enhancer enhancer = new Enhancer();
+                enhancer.setSuperclass(OOMTest.class);
+                enhancer.setUseCache(false);
+                enhancer.setCallback(new MethodInterceptor() &#123;
+                    @Override
+                    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable &#123;
+                        return methodProxy.invoke(o, args);
+                    &#125;
+                &#125;);
+                enhancer.create();
+            &#125;
+        &#125; catch (Exception e) &#123;
+            e.printStackTrace();
+        &#125;finally &#123;
+            System.out.println(&quot;************多少次之后发生了异常：&quot; + i);
+        &#125;
+        //Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Metaspace
+    &#125;
+&#125;</code></pre>
+<p>result:</p>
+<pre><code>************多少次之后发生了异常：345
+Exception in thread &quot;main&quot; 
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread &quot;main&quot;</code></pre>
+<ol start="5">
+<li><p><code>java.lang.OutOfMemoryError: GC overhead limit exceeded</code>:<code>GC</code>回收时间过长抛出,过长的定义是,超过98%的时间用来<code>GC</code>并且回收了不到2%的堆内存,连续多次<code>GC</code>都只回收了不到2%的极端情况才会抛出,该错误会导致<code>GC</code>清理的一点内存很快就会被再次填满,迫使<code>GC</code>再次执行,形成恶性循环,<code>GC</code>使用率100%但是<code>GC</code>却没有成果</p>
+<p>代码示例(在<code>vm option</code>上设置<code>-Xms10m -Xmx10m -XX:+PrintGCDetails -XX:MaxDirectMemorySize=5m</code>堆的最大内存和初始内存都为<code>10m</code>最大直接内存为<code>5m</code>):</p>
+<pre><code>public class OverHheadLimitExceededDemo &#123;
+    public static void main(String[] args) &#123;
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        int  i = 0;
+        while (true)&#123;
+            list.add(String.valueOf(++i).intern());
+        &#125;
+        //Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: GC overhead limit exceeded
+    &#125;
+&#125;</code></pre>
+<p>result:<code>GC</code>效果不明显</p>
+<pre><code>[GC (Allocation Failure) [PSYoungGen: 2048K-&gt;480K(2560K)] 2048K-&gt;936K(9728K), 0.0013541 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+[GC (Allocation Failure) [PSYoungGen: 2528K-&gt;497K(2560K)] 2984K-&gt;2637K(9728K), 0.0029600 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+[GC (Allocation Failure) [PSYoungGen: 2545K-&gt;496K(2560K)] 4685K-&gt;4570K(9728K), 0.0026608 secs] [Times: user=0.03 sys=0.00, real=0.00 secs] 
+[GC (Allocation Failure) [PSYoungGen: 2544K-&gt;504K(2560K)] 6618K-&gt;6570K(9728K), 0.0027356 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 504K-&gt;0K(2560K)] [ParOldGen: 6066K-&gt;6227K(7168K)] 6570K-&gt;6227K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0532608 secs] [Times: user=0.11 sys=0.00, real=0.05 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2048K-&gt;821K(2560K)] [ParOldGen: 6227K-&gt;7034K(7168K)] 8275K-&gt;7856K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0433280 secs] [Times: user=0.08 sys=0.00, real=0.04 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2048K-&gt;2006K(2560K)] [ParOldGen: 7034K-&gt;7034K(7168K)] 9082K-&gt;9040K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0380094 secs] [Times: user=0.08 sys=0.00, real=0.04 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2048K-&gt;2047K(2560K)] [ParOldGen: 7034K-&gt;7034K(7168K)] 9082K-&gt;9082K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0271896 secs] [Times: user=0.08 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7034K-&gt;7034K(7168K)] 9082K-&gt;9082K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0327770 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7035K-&gt;7035K(7168K)] 9083K-&gt;9083K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0426577 secs] [Times: user=0.08 sys=0.00, real=0.04 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7037K-&gt;7037K(7168K)] 9085K-&gt;9085K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0302575 secs] [Times: user=0.05 sys=0.02, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7039K-&gt;7039K(7168K)] 9087K-&gt;9087K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0286187 secs] [Times: user=0.05 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7041K-&gt;7041K(7168K)] 9089K-&gt;9089K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0273682 secs] [Times: user=0.08 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7042K-&gt;7042K(7168K)] 9090K-&gt;9090K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0283171 secs] [Times: user=0.06 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7044K-&gt;7044K(7168K)] 9092K-&gt;9092K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0307638 secs] [Times: user=0.06 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7046K-&gt;7046K(7168K)] 9094K-&gt;9094K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0278689 secs] [Times: user=0.11 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7048K-&gt;7048K(7168K)] 9096K-&gt;9096K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0330232 secs] [Times: user=0.13 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7049K-&gt;7049K(7168K)] 9097K-&gt;9097K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0329980 secs] [Times: user=0.13 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7051K-&gt;7051K(7168K)] 9099K-&gt;9099K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0330133 secs] [Times: user=0.13 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7053K-&gt;7053K(7168K)] 9101K-&gt;9101K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0309811 secs] [Times: user=0.06 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7055K-&gt;7055K(7168K)] 9103K-&gt;9103K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0313091 secs] [Times: user=0.09 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7056K-&gt;7056K(7168K)] 9104K-&gt;9104K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0320053 secs] [Times: user=0.13 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7058K-&gt;7058K(7168K)] 9106K-&gt;9106K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0321824 secs] [Times: user=0.08 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7060K-&gt;7060K(7168K)] 9108K-&gt;9108K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0319028 secs] [Times: user=0.09 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7062K-&gt;7062K(7168K)] 9110K-&gt;9110K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0301211 secs] [Times: user=0.11 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7063K-&gt;7063K(7168K)] 9111K-&gt;9111K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0344197 secs] [Times: user=0.11 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7065K-&gt;7065K(7168K)] 9113K-&gt;9113K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0339853 secs] [Times: user=0.11 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7067K-&gt;7067K(7168K)] 9115K-&gt;9115K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0362988 secs] [Times: user=0.06 sys=0.00, real=0.04 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7069K-&gt;7069K(7168K)] 9117K-&gt;9117K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0304594 secs] [Times: user=0.08 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7070K-&gt;7070K(7168K)] 9118K-&gt;9118K(9728K), [Metaspace: 3233K-&gt;3233K(1056768K)], 0.0320628 secs] [Times: user=0.08 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7082K-&gt;7077K(7168K)] 9130K-&gt;9125K(9728K), [Metaspace: 3242K-&gt;3242K(1056768K)], 0.0312339 secs] [Times: user=0.11 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7080K-&gt;7060K(7168K)] 9128K-&gt;9108K(9728K), [Metaspace: 3245K-&gt;3245K(1056768K)], 0.0404792 secs] [Times: user=0.11 sys=0.00, real=0.04 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7062K-&gt;7062K(7168K)] 9110K-&gt;9110K(9728K), [Metaspace: 3246K-&gt;3246K(1056768K)], 0.0328442 secs] [Times: user=0.08 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7064K-&gt;7064K(7168K)] 9112K-&gt;9112K(9728K), [Metaspace: 3246K-&gt;3246K(1056768K)], 0.0336342 secs] [Times: user=0.13 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7065K-&gt;7065K(7168K)] 9113K-&gt;9113K(9728K), [Metaspace: 3246K-&gt;3246K(1056768K)], 0.0367303 secs] [Times: user=0.11 sys=0.00, real=0.04 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7067K-&gt;7067K(7168K)] 9115K-&gt;9115K(9728K), [Metaspace: 3246K-&gt;3246K(1056768K)], 0.0329345 secs] [Times: user=0.11 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7069K-&gt;7069K(7168K)] 9117K-&gt;9117K(9728K), [Metaspace: 3246K-&gt;3246K(1056768K)], 0.0322445 secs] [Times: user=0.16 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7071K-&gt;7071K(7168K)] 9119K-&gt;9119K(9728K), [Metaspace: 3246K-&gt;3246K(1056768K)], 0.0324392 secs] [Times: user=0.09 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7073K-&gt;7073K(7168K)] 9121K-&gt;9121K(9728K), [Metaspace: 3246K-&gt;3246K(1056768K)], 0.0318748 secs] [Times: user=0.11 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7074K-&gt;7074K(7168K)] 9122K-&gt;9122K(9728K), [Metaspace: 3246K-&gt;3246K(1056768K)], 0.0308626 secs] [Times: user=0.11 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7076K-&gt;7076K(7168K)] 9124K-&gt;9124K(9728K), [Metaspace: 3246K-&gt;3246K(1056768K)], 0.0388157 secs] [Times: user=0.09 sys=0.00, real=0.04 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7081K-&gt;7078K(7168K)] 9129K-&gt;9126K(9728K), [Metaspace: 3251K-&gt;3251K(1056768K)], 0.0312564 secs] [Times: user=0.09 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7079K-&gt;7079K(7168K)] 9127K-&gt;9127K(9728K), [Metaspace: 3252K-&gt;3252K(1056768K)], 0.0332782 secs] [Times: user=0.08 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7081K-&gt;7081K(7168K)] 9129K-&gt;9129K(9728K), [Metaspace: 3252K-&gt;3252K(1056768K)], 0.0313380 secs] [Times: user=0.06 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7083K-&gt;7083K(7168K)] 9131K-&gt;9131K(9728K), [Metaspace: 3252K-&gt;3252K(1056768K)], 0.0302698 secs] [Times: user=0.08 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;2047K(2560K)] [ParOldGen: 7085K-&gt;7085K(7168K)] 9133K-&gt;9133K(9728K), [Metaspace: 3252K-&gt;3252K(1056768K)], 0.0311400 secs] [Times: user=0.08 sys=0.00, real=0.03 secs] 
+[Full GC (Ergonomics) [PSYoungGen: 2047K-&gt;0K(2560K)] [ParOldGen: 7143K-&gt;647K(7168K)] 9191K-&gt;647K(9728K), [Metaspace: 3304K-&gt;3304K(1056768K)], 0.0042610 secs] [Times: user=0.05 sys=0.00, real=0.00 secs] 
+Heap
+ PSYoungGen      total 2560K, used 70K [0x00000000ffd00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 2048K, 4% used [0x00000000ffd00000,0x00000000ffd15368,0x00000000fff00000)
+  from space 512K, 0% used [0x00000000fff80000,0x00000000fff80000,0x0000000100000000)
+  to   space 512K, 0% used [0x00000000fff00000,0x00000000fff00000,0x00000000fff80000)
+ ParOldGen       total 7168K, used 647K [0x00000000ff600000, 0x00000000ffd00000, 0x00000000ffd00000)
+  object space 7168K, 9% used [0x00000000ff600000,0x00000000ff6a1ce0,0x00000000ffd00000)
+ Metaspace       used 3371K, capacity 4496K, committed 4864K, reserved 1056768K
+  class space    used 362K, capacity 388K, committed 512K, reserved 1048576K
+Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: GC overhead limit exceeded
+    at java.lang.Integer.toString(Integer.java:403)
+    at java.lang.String.valueOf(String.java:3099)
+    at com.xu.juc.oom.OverHheadLimitExceededDemo.main(OverHheadLimitExceededDemo.java:15)</code></pre>
+</li>
+<li><p><code>java.lang.StackOverflowError</code>:栈内存溢出</p>
+<p>代码示例:</p>
+<pre><code>public class StackOverFlowErrorDemo &#123;
+    public static void main(String[] args) &#123;
+        stackOverFlowError();
+    &#125;
+
+    private static void stackOverFlowError() &#123;
+        stackOverFlowError();
+        //Exception in thread &quot;main&quot; java.lang.StackOverflowError
+    &#125;
+&#125;</code></pre>
+<p>result:`Exception in thread “main” java.lang.StackOverflowError</p>
+<pre><code>at com.xu.juc.oom.StackOverFlowErrorDemo.stackOverFlowError(StackOverFlowErrorDemo.java:13)`</code></pre>
+</li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">xu ling yun</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://xly5.gitee.io/2020/11/11/oom-xiang-jie/">https://xly5.gitee.io/2020/11/11/oom-xiang-jie/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">xu ling yun</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/OOM/">
+                                    <span class="chip bg-color">OOM</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .mvaline-card {
+        margin: 1.5rem auto;
+    }
+
+    .mvaline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+</style>
+
+<div class="card mvaline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="mvcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/minivaline/MiniValine.js"></script>
+<script>
+    new MiniValine({
+        el: '#mvcomments',
+        appId: 'ggbwU6hl4tMe3yV3HhQF1zFk-gzGzoHsz',
+        appKey: 'R7VPCb6JeTtvgmwEF4LQFp6l',
+        mode: 'DesertsP',
+        placeholder: 'Write a Comment',
+        pathname: window.location.pathname,
+        lang: '',
+        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
+        tagMeta: ["管理员", "小伙伴", "访客"],
+        master: ["de8a7aa53d07e6b6bceb45c64027763d"],
+        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
+        math: true,
+        md: true,
+        enableQQ: false,
+        NoRecordIP: false,
+        visitor: true,
+        maxNest: 6,
+        pageSize: 6,
+        serverURLs: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/11/11/qi-da-la-ji-shou-ji-qi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="七大垃圾收集器">
+                        
+                        <span class="card-title">七大垃圾收集器</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            四大主要的垃圾收集器
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-11
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/GC/" class="post-category">
+                                    GC
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/GC/">
+                        <span class="chip bg-color">GC</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/10/gcroot/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="GCRoot">
+                        
+                        <span class="card-title">GCRoot</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/GC/" class="post-category">
+                                    GC
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/GCRoot/">
+                        <span class="chip bg-color">GCRoot</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, h5 ,h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, h5 ,h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">xu ling yun</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">16.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/xly-star" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1067784811@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1067784811" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1067784811" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
