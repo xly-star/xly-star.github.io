@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2020-11-11T04:12:48.982Z</updated>
+  <updated>2020-11-12T10:52:44.454Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -17,11 +17,49 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>github搜索</title>
+    <link href="https://xly5.gitee.io/2020/11/12/github-sou-suo/"/>
+    <id>https://xly5.gitee.io/2020/11/12/github-sou-suo/</id>
+    <published>2020-11-12T10:32:04.000Z</published>
+    <updated>2020-11-12T10:52:44.454Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;github搜索命令&quot;&gt;&lt;a href=&quot;#github搜索命令&quot; class=&quot;headerlink&quot; title=&quot;github搜索命令&quot;&gt;&lt;/a&gt;github搜索命令&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="github" scheme="https://xly5.gitee.io/categories/github/"/>
+    
+    
+    <category term="github" scheme="https://xly5.gitee.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux查看资源占用命令</title>
+    <link href="https://xly5.gitee.io/2020/11/12/linux-cha-kan-zi-yuan-zhan-yong-ming-ling/"/>
+    <id>https://xly5.gitee.io/2020/11/12/linux-cha-kan-zi-yuan-zhan-yong-ming-ling/</id>
+    <published>2020-11-12T09:58:05.000Z</published>
+    <updated>2020-11-12T10:53:10.882Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;生产环境出现cpu占用过高-怎么定位&quot;&gt;&lt;a href=&quot;#生产环境出现cpu占用过高-怎么定位&quot; class=&quot;headerlink&quot; title=&quot;生产环境出现cpu占用过高,怎么定位&quot;&gt;&lt;/a&gt;生产环境出现&lt;code&gt;cpu&lt;/code&gt;占用过高,怎么定位&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://xly5.gitee.io/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://xly5.gitee.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>七大垃圾收集器</title>
     <link href="https://xly5.gitee.io/2020/11/11/qi-da-la-ji-shou-ji-qi/"/>
     <id>https://xly5.gitee.io/2020/11/11/qi-da-la-ji-shou-ji-qi/</id>
     <published>2020-11-11T02:58:27.000Z</published>
-    <updated>2020-11-11T04:12:48.982Z</updated>
+    <updated>2020-11-12T08:45:19.229Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;四大主要的垃圾收集器&quot;&gt;&lt;a href=&quot;#四大主要的垃圾收集器&quot; class=&quot;headerlink&quot; title=&quot;四大主要的垃圾收集器&quot;&gt;&lt;/a&gt;四大主要的垃圾收集器&lt;/h1&gt;</summary>
