@@ -443,14 +443,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-18
+                    2020-11-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    349
+                    371
                 </div>
                 
 
@@ -483,18 +483,18 @@
 </li>
 <li><p>并且[]中括号运算，还可以输出 map 集合中 key 里含有特殊字符的 key 的值。</p>
 </li>
-<li><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span>
-        <span class="token attr-name">Map&lt;String,Object</span><span class="token punctuation">></span></span> map = new HashMap<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>String,</span> <span class="token attr-name">Object</span><span class="token punctuation">></span></span>();
-        map.put("a.a.a", "aaaValue");
-        map.put("b+b+b", "bbbValue");
-        map.put("c-c-c", "cccValue");
-        request.setAttribute("map", map);
-    %>
-    $<span class="token entity" title="&#123;">&amp;#123;</span> map['a.a.a'] <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
-    $<span class="token entity" title="&#123;">&amp;#123;</span> map["b+b+b"] <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
-    $<span class="token entity" title="&#123;">&amp;#123;</span> map['c-c-c'] <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></code></pre>
+<li><pre><code>&lt;body&gt;
+    &lt;%
+        Map&lt;String,Object&gt; map = new HashMap&lt;String, Object&gt;();
+        map.put(&quot;a.a.a&quot;, &quot;aaaValue&quot;);
+        map.put(&quot;b+b+b&quot;, &quot;bbbValue&quot;);
+        map.put(&quot;c-c-c&quot;, &quot;cccValue&quot;);
+        request.setAttribute(&quot;map&quot;, map);
+    %&gt;
+    $&#123; map[&#39;a.a.a&#39;] &#125; &lt;br&gt;
+    $&#123; map[&quot;b+b+b&quot;] &#125; &lt;br&gt;
+    $&#123; map[&#39;c-c-c&#39;] &#125; &lt;br&gt;
+&lt;/body&gt;</code></pre>
 </li>
 </ul>
 <p><strong><em>注意:El表达式中查找javabean中元素值不是看是否有该元素，而是看是否有该get方法，要是有get方法就算没有属性值也能找到</em></strong></p>
