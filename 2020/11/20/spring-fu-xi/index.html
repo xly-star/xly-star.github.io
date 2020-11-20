@@ -450,7 +450,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.9k
+                    4.8k
                 </div>
                 
 
@@ -529,13 +529,13 @@ System.out.println(student);
 <h1 id="FactoryBean"><a href="#FactoryBean" class="headerlink" title="FactoryBean"></a>FactoryBean</h1><p>Spring中有两种类型的bean，一种是普通bean，另一种是工厂bean，即FactoryBean。</p>
 <p>工厂bean跟普通bean不同，其返回的对象不是指定类的一个实例，其返回的是该工厂bean的getObject方法所返回的对象。</p>
 <p>工厂bean必须实现org.springframework.beans.factory.FactoryBean接口。</p>
-<p>![FactoryBean](/medias/spring/factorybean.png FactoryBean)</p>
+<p>![FactoryBean](/medias/spring/factorybean.png “FactoryBean”)</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>product<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.atguigu.spring.bean.ProductFactory<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>productName<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Mp3<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span></code></pre>
 <h1 id="bean的作用域"><a href="#bean的作用域" class="headerlink" title="bean的作用域"></a>bean的作用域</h1><p>在Spring中，可以在<bean>元素的scope属性里设置bean的作用域，以决定这个bean是单实例的还是多实例的。</p>
 <p>默认情况下，Spring只为每个在IOC容器里声明的bean创建唯一一个实例，整个IOC容器范围内都能共享该实例：所有后续的getBean()调用和bean引用都将返回这个唯一的bean实例。该作用域被称为singleton，它是所有bean的默认作用域。</p>
-<p>![bean作用域](/medias/spring/bean作用域.png bean作用域)</p>
+<p><img src="/medias/spring/bean%E4%BD%9C%E7%94%A8%E5%9F%9F.png" alt="bean作用域" title="bean作用域"></p>
 <p><span style="color:red">当bean的作用域为单例时，Spring会在IOC容器对象创建时就创建bean的对象实例。</span>而当bean的作用域为prototype时，IOC容器在获取bean的实例时创建bean的实例对象。</p>
 <h1 id="bean的生命周期"><a href="#bean的生命周期" class="headerlink" title="bean的生命周期"></a>bean的生命周期</h1><ol>
 <li><p>   Spring IOC容器可以管理bean的生命周期，Spring允许在bean生命周期内特定的时间点执行指定的任务。</p>
@@ -789,13 +789,13 @@ public class MyLoggerAspect &#123;
 </tbody></table>
 </li>
 <li><p>在AspectJ中，切入点表达式可以通过 “&amp;&amp;”、“||”、“!”等操作符结合起来。</p>
-<p>| 表达式 | <code>execution (* *.add(int,..)) ||execution(* *.sub(int,..))</code> |<br>| —- | :———————————————————- |<br>|  含义  | 任意类中第一个参数为int类型的add方法或sub方法              |<br>| 表达式 | !execution (* *.add(int,..))                               |<br>|  含义  | 匹配不是任意类中第一个参数为int类型的add方法               |</p>
-<h2 id="当前连接点细节"><a href="#当前连接点细节" class="headerlink" title="当前连接点细节"></a>当前连接点细节</h2><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>​    切入点表达式通常都会是从宏观上定位一组方法，和具体某个通知的注解结合起来就能够确定对应的连接点。那么就一个具体的连接点而言，我们可能会关心这个连接点的一些具体信息，例如：当前连接点所在方法的方法名、当前传入的参数值等等。这些信息都封装在<code>JoinPoint</code>接口的实例对象中。</p>
+</li>
+</ol>
+<p>| 表达式 | <code>execution (* *.add(int,..)) ||execution(* *.sub(int,..))</code> |<br>| —– | :———————————————————- |<br>|  含义  | 任意类中第一个参数为int类型的add方法或sub方法              |<br>| 表达式 | !execution (* *.add(int,..))                         |<br>|  含义  | 匹配不是任意类中第一个参数为int类型的add方法               |</p>
+<h2 id="当前连接点细节"><a href="#当前连接点细节" class="headerlink" title="当前连接点细节"></a>当前连接点细节</h2><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>   ​    切入点表达式通常都会是从宏观上定位一组方法，和具体某个通知的注解结合起来就能够确定对应的连接点。那么就一个具体的连接点而言，我们可能会关心这个连接点的一些具体信息，例如：当前连接点所在方法的方法名、当前传入的参数值等等。这些信息都封装在<code>JoinPoint</code>接口的实例对象中。</p>
 <h4 id="JoinPoint"><a href="#JoinPoint" class="headerlink" title="JoinPoint"></a>JoinPoint</h4><ol>
 <li>getArgs():获取实际的参数数组</li>
 <li>getSignature():封装签名信息的对象,可以进一步获取方法名</li>
-</ol>
-</li>
 </ol>
 <h3 id="Spring事务管理"><a href="#Spring事务管理" class="headerlink" title="Spring事务管理"></a>Spring事务管理</h3><h3 id="编程式事务管理"><a href="#编程式事务管理" class="headerlink" title="编程式事务管理"></a>编程式事务管理</h3><ol>
 <li>   使用原生的JDBC API进行事务管理</li>
@@ -835,7 +835,7 @@ public class MyLoggerAspect &#123;
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">tx:</span>annotation-driven</span> <span class="token attr-name">transaction-manager</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>transactionManager<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
 <p>在需要进行事务控制的方法上加注解 @Transactional</p>
 <h3 id="事务的传播行为"><a href="#事务的传播行为" class="headerlink" title="事务的传播行为"></a>事务的传播行为</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>​        当事务方法被另一个事务方法调用时，必须指定事务应该如何传播。例如：方法可能继续在现有事务中运行，也可能开启一个新事务，并在自己的事务中运行。事务的传播行为可以由传播属性指定。Spring定义了7种类传播行为。</p>
-<p>![事务传播行为](/medias/spring/事务传播行为.png 事务传播行为)</p>
+<p><img src="/medias/spring/%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD%E8%A1%8C%E4%B8%BA.png" alt="事务传播行为" title="事务传播行为"></p>
 <ul>
 <li><strong>1.PROPAGATION_REQUIRED</strong> – 支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。</li>
 <li><strong>2.PROPAGATION_SUPPORTS</strong> – 支持当前事务，如果当前没有事务，就以非事务方式执行。</li>
