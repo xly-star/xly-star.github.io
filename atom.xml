@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2020-11-15T10:52:56.283Z</updated>
+  <updated>2020-11-20T07:12:54.814Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -17,11 +17,203 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>spring复习</title>
+    <link href="https://xly5.gitee.io/2020/11/20/spring-fu-xi/"/>
+    <id>https://xly5.gitee.io/2020/11/20/spring-fu-xi/</id>
+    <published>2020-11-20T00:52:06.000Z</published>
+    <updated>2020-11-20T07:12:54.814Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;spring创建通过IOC-Inversion-of-Control-创建对象&quot;&gt;&lt;a href=&quot;#spring创建通过IOC-Inversion-of-Control-创建对象&quot; class=&quot;headerlink&quot; title=&quot;spring创建通过IOC(Inversion of Control)创建对象&quot;&gt;&lt;/a&gt;spring创建通过IOC(Inversion of Control)创建对象&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="spring" scheme="https://xly5.gitee.io/categories/spring/"/>
+    
+    
+    <category term="spring" scheme="https://xly5.gitee.io/tags/spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tomcat连接</title>
+    <link href="https://xly5.gitee.io/2020/11/19/tomcat-lian-jie/"/>
+    <id>https://xly5.gitee.io/2020/11/19/tomcat-lian-jie/</id>
+    <published>2020-11-19T11:00:59.000Z</published>
+    <updated>2020-11-19T11:04:30.111Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;tomcat连接&quot;&gt;&lt;a href=&quot;#tomcat连接&quot; class=&quot;headerlink&quot; title=&quot;tomcat连接&quot;&gt;&lt;/a&gt;tomcat连接&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="tomcat" scheme="https://xly5.gitee.io/categories/tomcat/"/>
+    
+    
+    <category term="tomcat" scheme="https://xly5.gitee.io/tags/tomcat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadLocal</title>
+    <link href="https://xly5.gitee.io/2020/11/19/threadlocal/"/>
+    <id>https://xly5.gitee.io/2020/11/19/threadlocal/</id>
+    <published>2020-11-19T10:48:05.000Z</published>
+    <updated>2020-11-19T11:47:02.839Z</updated>
+    
+    
+    <summary type="html"> &lt;h1 style=&quot;color:red&quot;&gt;ThreadLocal&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="ThreadLocal" scheme="https://xly5.gitee.io/categories/ThreadLocal/"/>
+    
+    
+    <category term="ThreadLocal" scheme="https://xly5.gitee.io/tags/ThreadLocal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文件上传和下载</title>
+    <link href="https://xly5.gitee.io/2020/11/19/wen-jian-shang-chuan-he-xia-zai/"/>
+    <id>https://xly5.gitee.io/2020/11/19/wen-jian-shang-chuan-he-xia-zai/</id>
+    <published>2020-11-19T02:17:23.000Z</published>
+    <updated>2020-11-19T02:34:36.850Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;文件上传&quot;&gt;&lt;a href=&quot;#文件上传&quot; class=&quot;headerlink&quot; title=&quot;文件上传&quot;&gt;&lt;/a&gt;文件上传&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="文件上传和下载" scheme="https://xly5.gitee.io/categories/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/"/>
+    
+    
+    <category term="文件上传和下载" scheme="https://xly5.gitee.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EL表达式</title>
+    <link href="https://xly5.gitee.io/2020/11/18/el-biao-da-shi/"/>
+    <id>https://xly5.gitee.io/2020/11/18/el-biao-da-shi/</id>
+    <published>2020-11-18T01:03:33.000Z</published>
+    <updated>2020-11-18T08:00:08.643Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;EL 表达式的全称是：Expression Language。是表达式语言。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JSP" scheme="https://xly5.gitee.io/categories/JSP/"/>
+    
+    
+    <category term="EL表达式" scheme="https://xly5.gitee.io/tags/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JSP响应对象</title>
+    <link href="https://xly5.gitee.io/2020/11/18/jsp-xiang-ying-dui-xiang/"/>
+    <id>https://xly5.gitee.io/2020/11/18/jsp-xiang-ying-dui-xiang/</id>
+    <published>2020-11-18T00:41:40.000Z</published>
+    <updated>2020-11-18T01:03:04.760Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;jsp-中的-out-输出和-response-getWriter-输出的区别&quot;&gt;&lt;a href=&quot;#jsp-中的-out-输出和-response-getWriter-输出的区别&quot; class=&quot;headerlink&quot; title=&quot;jsp 中的 out 输出和 response.getWriter 输出的区别&quot;&gt;&lt;/a&gt;jsp 中的 out 输出和 response.getWriter 输出的区别&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="JSP" scheme="https://xly5.gitee.io/categories/JSP/"/>
+    
+    
+    <category term="JSP" scheme="https://xly5.gitee.io/tags/JSP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>servlet生命周期</title>
+    <link href="https://xly5.gitee.io/2020/11/17/servlet-sheng-ming-zhou-qi/"/>
+    <id>https://xly5.gitee.io/2020/11/17/servlet-sheng-ming-zhou-qi/</id>
+    <published>2020-11-17T11:49:27.000Z</published>
+    <updated>2020-11-17T13:49:07.383Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;servlet生命周期&quot;&gt;&lt;a href=&quot;#servlet生命周期&quot; class=&quot;headerlink&quot; title=&quot;servlet生命周期&quot;&gt;&lt;/a&gt;servlet生命周期&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="servlet" scheme="https://xly5.gitee.io/categories/servlet/"/>
+    
+    <category term="生命周期" scheme="https://xly5.gitee.io/categories/servlet/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    
+    
+    <category term="servlet生命周期" scheme="https://xly5.gitee.io/tags/servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux</title>
+    <link href="https://xly5.gitee.io/2020/11/17/linux-zhao-hui-mi-ma/"/>
+    <id>https://xly5.gitee.io/2020/11/17/linux-zhao-hui-mi-ma/</id>
+    <published>2020-11-17T01:17:59.000Z</published>
+    <updated>2020-11-17T02:56:38.377Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;linux找回密码&quot;&gt;&lt;a href=&quot;#linux找回密码&quot; class=&quot;headerlink&quot; title=&quot;linux找回密码&quot;&gt;&lt;/a&gt;linux找回密码&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://xly5.gitee.io/categories/linux/"/>
+    
+    
+    <category term="linux找回密码" scheme="https://xly5.gitee.io/tags/linux%E6%89%BE%E5%9B%9E%E5%AF%86%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux</title>
+    <link href="https://xly5.gitee.io/2020/11/17/linux-guan-ji-ming-ling/"/>
+    <id>https://xly5.gitee.io/2020/11/17/linux-guan-ji-ming-ling/</id>
+    <published>2020-11-17T00:55:35.000Z</published>
+    <updated>2020-11-17T01:17:45.868Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;关机命令&quot;&gt;&lt;a href=&quot;#关机命令&quot; class=&quot;headerlink&quot; title=&quot;关机命令&quot;&gt;&lt;/a&gt;关机命令&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://xly5.gitee.io/categories/linux/"/>
+    
+    
+    <category term="关机命令" scheme="https://xly5.gitee.io/tags/%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim操作</title>
+    <link href="https://xly5.gitee.io/2020/11/17/vim-cao-zuo/"/>
+    <id>https://xly5.gitee.io/2020/11/17/vim-cao-zuo/</id>
+    <published>2020-11-17T00:44:23.000Z</published>
+    <updated>2020-11-17T00:48:49.920Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;vim基本操作&quot;&gt;&lt;a href=&quot;#vim基本操作&quot; class=&quot;headerlink&quot; title=&quot;vim基本操作&quot;&gt;&lt;/a&gt;vim基本操作&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://xly5.gitee.io/categories/linux/"/>
+    
+    
+    <category term="vim" scheme="https://xly5.gitee.io/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Javase(下)</title>
     <link href="https://xly5.gitee.io/2020/11/14/javase-xia/"/>
     <id>https://xly5.gitee.io/2020/11/14/javase-xia/</id>
     <published>2020-11-14T11:16:51.000Z</published>
-    <updated>2020-11-15T10:52:56.283Z</updated>
+    <updated>2020-11-15T14:51:06.158Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;线程&quot;&gt;&lt;a href=&quot;#线程&quot; class=&quot;headerlink&quot; title=&quot;线程&quot;&gt;&lt;/a&gt;线程&lt;/h1&gt;</summary>
@@ -42,7 +234,7 @@
     <link href="https://xly5.gitee.io/2020/11/13/javase-xiao-zhi-shi/"/>
     <id>https://xly5.gitee.io/2020/11/13/javase-xiao-zhi-shi/</id>
     <published>2020-11-13T02:25:04.000Z</published>
-    <updated>2020-11-14T11:16:08.342Z</updated>
+    <updated>2020-11-15T14:44:59.712Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;运算符&quot;&gt;&lt;a href=&quot;#运算符&quot; class=&quot;headerlink&quot; title=&quot;运算符&quot;&gt;&lt;/a&gt;运算符&lt;/h1&gt;</summary>
@@ -209,230 +401,6 @@
     
     
     <category term="JVM参数" scheme="https://xly5.gitee.io/tags/JVM%E5%8F%82%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ThreadPoolExecutor初体验</title>
-    <link href="https://xly5.gitee.io/2020/11/07/threadpoolexecutor-chu-ti-yan/"/>
-    <id>https://xly5.gitee.io/2020/11/07/threadpoolexecutor-chu-ti-yan/</id>
-    <published>2020-11-07T02:17:27.000Z</published>
-    <updated>2020-11-07T04:46:41.338Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;创建线程池的五个方法&quot;&gt;&lt;a href=&quot;#创建线程池的五个方法&quot; class=&quot;headerlink&quot; title=&quot;创建线程池的五个方法&quot;&gt;&lt;/a&gt;创建线程池的五个方法&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
-    
-    
-    <category term="线程池" scheme="https://xly5.gitee.io/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>生产者消费者模式</title>
-    <link href="https://xly5.gitee.io/2020/11/07/sheng-chan-zhe-xiao-fei-zhe-mo-shi/"/>
-    <id>https://xly5.gitee.io/2020/11/07/sheng-chan-zhe-xiao-fei-zhe-mo-shi/</id>
-    <published>2020-11-07T02:06:54.000Z</published>
-    <updated>2020-11-07T02:14:26.755Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;传统生产者消费者模式&quot;&gt;&lt;a href=&quot;#传统生产者消费者模式&quot; class=&quot;headerlink&quot; title=&quot;传统生产者消费者模式&quot;&gt;&lt;/a&gt;传统生产者消费者模式&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
-    
-    <category term="生产者消费者" scheme="https://xly5.gitee.io/categories/JUC/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85/"/>
-    
-    
-    <category term="生产者" scheme="https://xly5.gitee.io/tags/%E7%94%9F%E4%BA%A7%E8%80%85/"/>
-    
-    <category term="消费者" scheme="https://xly5.gitee.io/tags/%E6%B6%88%E8%B4%B9%E8%80%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阻塞队列的使用</title>
-    <link href="https://xly5.gitee.io/2020/11/07/zu-sai-dui-lie-de-shi-yong/"/>
-    <id>https://xly5.gitee.io/2020/11/07/zu-sai-dui-lie-de-shi-yong/</id>
-    <published>2020-11-07T01:46:08.000Z</published>
-    <updated>2020-11-07T02:06:16.973Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;阻塞队列初认识&quot;&gt;&lt;a href=&quot;#阻塞队列初认识&quot; class=&quot;headerlink&quot; title=&quot;阻塞队列初认识&quot;&gt;&lt;/a&gt;阻塞队列初认识&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
-    
-    <category term="阻塞队列" scheme="https://xly5.gitee.io/categories/JUC/%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97/"/>
-    
-    
-    <category term="阻塞队列" scheme="https://xly5.gitee.io/tags/%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>四种锁的认识</title>
-    <link href="https://xly5.gitee.io/2020/11/07/si-chong-suo-de-ren-shi/"/>
-    <id>https://xly5.gitee.io/2020/11/07/si-chong-suo-de-ren-shi/</id>
-    <published>2020-11-07T01:06:44.000Z</published>
-    <updated>2020-11-07T01:45:14.260Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;公平锁和非公平锁&quot;&gt;&lt;a href=&quot;#公平锁和非公平锁&quot; class=&quot;headerlink&quot; title=&quot;公平锁和非公平锁&quot;&gt;&lt;/a&gt;公平锁和非公平锁&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
-    
-    <category term="锁" scheme="https://xly5.gitee.io/categories/JUC/%E9%94%81/"/>
-    
-    
-    <category term="公平锁" scheme="https://xly5.gitee.io/tags/%E5%85%AC%E5%B9%B3%E9%94%81/"/>
-    
-    <category term="非公平锁" scheme="https://xly5.gitee.io/tags/%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%81/"/>
-    
-    <category term="可重入锁" scheme="https://xly5.gitee.io/tags/%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81/"/>
-    
-    <category term="递归锁" scheme="https://xly5.gitee.io/tags/%E9%80%92%E5%BD%92%E9%94%81/"/>
-    
-    <category term="自旋锁" scheme="https://xly5.gitee.io/tags/%E8%87%AA%E6%97%8B%E9%94%81/"/>
-    
-    <category term="独占锁(写锁)" scheme="https://xly5.gitee.io/tags/%E7%8B%AC%E5%8D%A0%E9%94%81-%E5%86%99%E9%94%81/"/>
-    
-    <category term="共享锁(读锁)" scheme="https://xly5.gitee.io/tags/%E5%85%B1%E4%BA%AB%E9%94%81-%E8%AF%BB%E9%94%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ABA问题</title>
-    <link href="https://xly5.gitee.io/2020/10/29/aba-wen-ti/"/>
-    <id>https://xly5.gitee.io/2020/10/29/aba-wen-ti/</id>
-    <published>2020-10-29T10:45:09.000Z</published>
-    <updated>2020-11-07T01:04:01.739Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;ABA问题的产生&quot;&gt;&lt;a href=&quot;#ABA问题的产生&quot; class=&quot;headerlink&quot; title=&quot;ABA问题的产生&quot;&gt;&lt;/a&gt;ABA问题的产生&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
-    
-    <category term="ABA" scheme="https://xly5.gitee.io/categories/JUC/ABA/"/>
-    
-    
-    <category term="CAS" scheme="https://xly5.gitee.io/tags/CAS/"/>
-    
-    <category term="ABA" scheme="https://xly5.gitee.io/tags/ABA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CAS的底层分析</title>
-    <link href="https://xly5.gitee.io/2020/10/29/cas-de-di-ceng-fen-xi/"/>
-    <id>https://xly5.gitee.io/2020/10/29/cas-de-di-ceng-fen-xi/</id>
-    <published>2020-10-29T08:06:57.000Z</published>
-    <updated>2020-10-29T08:46:09.061Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;CAS-Compare-And-Swap-比较交换&quot;&gt;&lt;a href=&quot;#CAS-Compare-And-Swap-比较交换&quot; class=&quot;headerlink&quot; title=&quot;CAS (Compare And Swap)比较交换&quot;&gt;&lt;/a&gt;CAS (Compare And Swap)比较交换&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
-    
-    <category term="cpu原语" scheme="https://xly5.gitee.io/categories/JUC/cpu%E5%8E%9F%E8%AF%AD/"/>
-    
-    
-    <category term="CAS" scheme="https://xly5.gitee.io/tags/CAS/"/>
-    
-    <category term="unsafe" scheme="https://xly5.gitee.io/tags/unsafe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单例模式最终版</title>
-    <link href="https://xly5.gitee.io/2020/10/29/dan-li-mo-shi-zui-zhong-ban/"/>
-    <id>https://xly5.gitee.io/2020/10/29/dan-li-mo-shi-zui-zhong-ban/</id>
-    <published>2020-10-29T06:53:18.000Z</published>
-    <updated>2020-11-06T04:22:52.630Z</updated>
-    
-    
-    <summary type="html">&lt;pre&gt;&lt;code&gt;# 单例模式&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    <category term="设计模式" scheme="https://xly5.gitee.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/JUC/"/>
-    
-    
-    <category term="volatile" scheme="https://xly5.gitee.io/tags/volatile/"/>
-    
-    <category term="单例模式" scheme="https://xly5.gitee.io/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GC的认识</title>
-    <link href="https://xly5.gitee.io/2020/10/27/jvm-de-ren-shi/"/>
-    <id>https://xly5.gitee.io/2020/10/27/jvm-de-ren-shi/</id>
-    <published>2020-10-27T02:39:32.000Z</published>
-    <updated>2020-10-27T04:02:09.328Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;GC的作用域&quot;&gt;&lt;a href=&quot;#GC的作用域&quot; class=&quot;headerlink&quot; title=&quot;GC的作用域&quot;&gt;&lt;/a&gt;GC的作用域&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="GC" scheme="https://xly5.gitee.io/categories/GC/"/>
-    
-    <category term="JVM" scheme="https://xly5.gitee.io/categories/GC/JVM/"/>
-    
-    
-    <category term="GC的基本认识" scheme="https://xly5.gitee.io/tags/GC%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>volatile是什么?</title>
-    <link href="https://xly5.gitee.io/2020/10/26/volatile-shi-shi-me/"/>
-    <id>https://xly5.gitee.io/2020/10/26/volatile-shi-shi-me/</id>
-    <published>2020-10-26T13:38:10.000Z</published>
-    <updated>2020-10-28T07:14:52.530Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;valatile是什么？&quot;&gt;&lt;a href=&quot;#valatile是什么？&quot; class=&quot;headerlink&quot; title=&quot;valatile是什么？&quot;&gt;&lt;/a&gt;valatile是什么？&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
-    
-    
-    <category term="volatile" scheme="https://xly5.gitee.io/tags/volatile/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建个人博客</title>
-    <link href="https://xly5.gitee.io/2020/10/23/da-jian-ge-ren-bo-ke/"/>
-    <id>https://xly5.gitee.io/2020/10/23/da-jian-ge-ren-bo-ke/</id>
-    <published>2020-10-23T08:41:46.000Z</published>
-    <updated>2020-10-24T08:07:00.372Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;搭建博客需要node-js的npm和git环境&quot;&gt;&lt;a href=&quot;#搭建博客需要node-js的npm和git环境&quot; class=&quot;headerlink&quot; title=&quot;搭建博客需要node.js的npm和git环境&quot;&gt;&lt;/a&gt;搭建博客需要node.js的npm和git环境&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="博客" scheme="https://xly5.gitee.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="搭建hexo博客" scheme="https://xly5.gitee.io/tags/%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   

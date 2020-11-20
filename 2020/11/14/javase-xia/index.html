@@ -454,7 +454,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    1.9k
                 </div>
                 
 
@@ -626,52 +626,48 @@ public void test3()&#123;
     Person p2 = null;
     p1 = p2;
 
+&#125;</code></pre>
+</li>
+<li><p>泛型在继承方面的体现<br>  虽然类A是类B的父类，但是<code>G&lt;A&gt;</code> 和<code>G&lt;B&gt;</code>二者不具备子父类关系，二者是并列关系。<br>  补充：类A是类B的父类，<code>A&lt;G&gt;</code> 是 <code>B&lt;G&gt; </code>的父类</p>
+</li>
+<li><p>通配符：?</p>
+<p><strong>类A是类B的父类，<code>G&lt;A&gt;</code>和<code>G&lt;B&gt;</code>是没关系的，二者共同的父类是：<code>G&lt;?&gt;</code></strong></p>
+<pre><code> @Test
+    public void test3()&#123;
+        List&lt;Object&gt; list1 = null;
+        List&lt;String&gt; list2 = null;
+
+        List&lt;?&gt; list = null;
+
+        list = list1;
+        list = list2;
+        //编译通过
+//        print(list1);
+//        print(list2);
+        List&lt;String&gt; list3 = new ArrayList&lt;&gt;();
+        list3.add(&quot;AA&quot;);
+        list3.add(&quot;BB&quot;);
+        list3.add(&quot;CC&quot;);
+        list = list3;
+        //添加(写入)：对于List&lt;?&gt;就不能向其内部添加数据。
+        //除了添加null之外。
+//        list.add(&quot;DD&quot;);
+//        list.add(&#39;?&#39;);
+
+        list.add(null);
+
+        //获取(读取)：允许读取数据，读取的数据类型为Object。
+        Object o = list.get(0);
+        System.out.println(o);
+
 </code></pre>
 </li>
 </ol>
-<p>   }</p>
-<pre><code>
-4. 泛型在继承方面的体现
-
-  虽然类A是类B的父类，但是G&lt;A&gt; 和G&lt;B&gt;二者不具备子父类关系，二者是并列关系。
-  补充：类A是类B的父类，A&lt;G&gt; 是 B&lt;G&gt; 的父类
-
-5. 通配符：?
-
-**类A是类B的父类，G&lt;A&gt;和G&lt;B&gt;是没关系的，二者共同的父类是：G&lt;?&gt;**
-</code></pre>
-<pre><code>@Test
-   public void test3()&#123;
-       List&lt;Object&gt; list1 = null;
-       List&lt;String&gt; list2 = null;
-
-       List&lt;?&gt; list = null;
-
-       list = list1;
-       list = list2;
-       //编译通过</code></pre>
-<p>   //        print(list1);<br>   //        print(list2);</p>
-<pre><code>       //
-       List&lt;String&gt; list3 = new ArrayList&lt;&gt;();
-       list3.add(&quot;AA&quot;);
-       list3.add(&quot;BB&quot;);
-       list3.add(&quot;CC&quot;);
-       list = list3;
-       //添加(写入)：对于List&lt;?&gt;就不能向其内部添加数据。
-       //除了添加null之外。</code></pre>
-<p>   //        list.add(“DD”);<br>   //        list.add(‘?’);</p>
-<pre><code>       list.add(null);
-
-       //获取(读取)：允许读取数据，读取的数据类型为Object。
-       Object o = list.get(0);
-       System.out.println(o);
-
-
-   &#125;</code></pre>
+<pre><code>   &#125;</code></pre>
 <pre><code>
 6. 有限制条件的通配符的使用
 
-*  ? extends A:
+* ? extends A:
                   ***G&lt;? extends A&gt; 可以作为G&lt;A&gt;和G&lt;B&gt;的父类，其中B是A的子类***
 
 * ? super A:
@@ -712,6 +708,7 @@ public void test3()&#123;
 
    &#125;    </code></pre>
 <pre><code>
+
 # BufferedReader和BufferedWriter
 </code></pre>
 <p>@Test<br>    public void testBufferedReaderBufferedWriter(){<br>        BufferedReader br = null;<br>        BufferedWriter bw = null;<br>        try {<br>            //创建文件和相应的流<br>            br = new BufferedReader(new FileReader(new File(“dbcp.txt”)));<br>            bw = new BufferedWriter(new FileWriter(new File(“dbcp1.txt”)));</p>
@@ -764,8 +761,7 @@ public void test4()&#123;
     ParameterizedType paramType = (ParameterizedType) genericSuperclass;
     //获取泛型类型
     Type[] actualTypeArguments = paramType.getActualTypeArguments();</code></pre>
-<p>//        System.out.println(actualTypeArguments[0].getTypeName());<br>        System.out.println(((Class)actualTypeArguments[0]).getName());<br>    }</p>
-<pre><code></code></pre>
+<p>//        System.out.println(actualTypeArguments[0].getTypeName());<br>        System.out.println(((Class)actualTypeArguments[0]).getName());<br>    }<br>```</p>
 
             </div>
             <hr/>
@@ -1044,52 +1040,46 @@ public void test4()&#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/14/javase-xia/">
+                <a href="/2020/11/17/vim-cao-zuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Javase(下)">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="vim操作">
                         
-                        <span class="card-title">Javase(下)</span>
+                        <span class="card-title">vim操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            线程
+                            vim基本操作
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Javase/" class="post-category">
-                                    Javase
-                                </a>
-                            
-                            <a href="/categories/Javase/interview/" class="post-category">
-                                    interview
+                            <a href="/categories/linux/" class="post-category">
+                                    linux
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">小知识</span>
+                    <a href="/tags/vim/">
+                        <span class="chip bg-color">vim</span>
                     </a>
                     
                 </div>
@@ -1349,7 +1339,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">24.2k</span>&nbsp;字
+                class="white-color">32.6k</span>&nbsp;字
             
             
             

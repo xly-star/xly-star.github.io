@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-14
+                    2020-11-15
                 </div>
                 
 
@@ -645,13 +645,11 @@ class ScannerTest&#123;
  * 9. import static:导入指定类或接口中的静态结构:属性或方法。 </code></pre>
 <h1 id="重写的规则"><a href="#重写的规则" class="headerlink" title="重写的规则"></a>重写的规则</h1><ol>
 <li><p>方法的声明： 权限修饰符  返回值类型  方法名(形参列表) throws 异常的类型{</p>
-<p>​                                    //方法体</p>
-<p>​                        }</p>
+<pre><code>                       //方法体
+       &#125;</code></pre>
 <ul>
-<li><pre><code>    约定俗称：子类中的叫重写的方法，父类中的叫被重写的方法</code></pre>
-</li>
-<li><pre><code>    ① 子类重写的方法的方法名和形参列表与父类被重写的方法的方法名和形参列表相同</code></pre>
-</li>
+<li>约定俗称：子类中的叫重写的方法，父类中的叫被重写的方法</li>
+<li>① 子类重写的方法的方法名和形参列表与父类被重写的方法的方法名和形参列表相同</li>
 <li>② 子类重写的方法的权限修饰符<strong>不小于</strong>父类被重写的方法的权限修饰符</li>
 </ul>
 <p>​      <strong>特殊情况：子类不能重写父类中声明为private权限的方法</strong></p>
@@ -715,33 +713,25 @@ this is A’s constructor</code></pre>
 </li>
 <li><p>具体的：<br>抽象类,就像是向别人声明:我能赚大钱<br>实例化就是具体的行动<br>因为抽象类只是个声明,而没有计划,也不知道怎么赚钱<br>所以我们是不会投资给钱(内存)他的,就算投资他他也不能做任何事<br>为了保存大家的利益,没有具休的赚钱计划不能让他执行<br>abstract修饰类：抽象类</p>
 <ul>
-<li>   此类不能实例化<ul>
-<li><pre><code> **抽象类中一定有构造器**，便于子类实例化时调用（涉及：子类对象实例化的全过程,子类会调用父类的构造器）</code></pre>
-</li>
-<li><pre><code> 开发中，都会提供抽象类的子类，让子类对象实例化，完成相关的操作 ---&gt;抽象的使用前提：继承性</code></pre>
-</li>
+<li>此类不能实例化<ul>
+<li><strong>抽象类中一定有构造器</strong>，便于子类实例化时调用（涉及：子类对象实例化的全过程,子类会调用父类的构造器）</li>
+<li>开发中，都会提供抽象类的子类，让子类对象实例化，完成相关的操作 —&gt;抽象的使用前提：继承性</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p>abstract修饰方法：抽象方法</p>
 <ul>
-<li><pre><code>    抽象方法只方法的声明，没方法体</code></pre>
-</li>
-<li><pre><code>    **包含抽象方法的类，一定是一个抽象类。反之，抽象类中可以没有抽象方法的。**</code></pre>
-</li>
-<li><pre><code>   若子类重写了父类中的所的抽象方法后，此子类方可实例化</code></pre>
-</li>
-<li><pre><code>    若子类没重写父类中的所的抽象方法，则此子类也是一个抽象类，需要使用abstract修饰</code></pre>
-</li>
+<li>抽象方法只方法的声明，没方法体</li>
+<li><strong>包含抽象方法的类，一定是一个抽象类。反之，抽象类中可以没有抽象方法的。</strong></li>
+<li>若子类重写了父类中的所的抽象方法后，此子类方可实例化</li>
+<li>若子类没重写父类中的所的抽象方法，则此子类也是一个抽象类，需要使用abstract修饰</li>
 </ul>
 </li>
 <li><p>注意点：</p>
 <ul>
-<li><pre><code>    abstract不能用来修饰：属性、构造器等结构</code></pre>
-</li>
-<li><pre><code>    abstract不能用来修饰私方法、静态方法、final的方法、final的类（**静态方法不能被重写**）</code></pre>
-</li>
+<li>abstract不能用来修饰：属性、构造器等结构</li>
+<li>abstract不能用来修饰私方法、静态方法、final的方法、final的类（<strong>静态方法不能被重写</strong>）</li>
 </ul>
 </li>
 </ol>
@@ -1360,7 +1350,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">24.2k</span>&nbsp;字
+                class="white-color">32.6k</span>&nbsp;字
             
             
             
