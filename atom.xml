@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2020-11-20T07:29:26.335Z</updated>
+  <updated>2020-11-23T07:33:33.335Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mybatis复习</title>
+    <link href="https://xly5.gitee.io/2020/11/21/mybatis-fu-xi/"/>
+    <id>https://xly5.gitee.io/2020/11/21/mybatis-fu-xi/</id>
+    <published>2020-11-21T00:34:19.000Z</published>
+    <updated>2020-11-23T07:33:33.335Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;mybatis配置&quot;&gt;&lt;a href=&quot;#mybatis配置&quot; class=&quot;headerlink&quot; title=&quot;mybatis配置&quot;&gt;&lt;/a&gt;mybatis配置&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="mybatis" scheme="https://xly5.gitee.io/categories/mybatis/"/>
+    
+    
+    <category term="mybatis" scheme="https://xly5.gitee.io/tags/mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>springmvc复习</title>
+    <link href="https://xly5.gitee.io/2020/11/20/springmvc-fu-xi/"/>
+    <id>https://xly5.gitee.io/2020/11/20/springmvc-fu-xi/</id>
+    <published>2020-11-20T07:41:28.000Z</published>
+    <updated>2020-11-20T12:01:43.484Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;springmvc常用组件&quot;&gt;&lt;a href=&quot;#springmvc常用组件&quot; class=&quot;headerlink&quot; title=&quot;springmvc常用组件&quot;&gt;&lt;/a&gt;springmvc常用组件&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="springmvc" scheme="https://xly5.gitee.io/categories/springmvc/"/>
+    
+    
+    <category term="springmvc" scheme="https://xly5.gitee.io/tags/springmvc/"/>
+    
+  </entry>
   
   <entry>
     <title>spring复习</title>
@@ -363,44 +401,6 @@
     
     
     <category term="引用类型" scheme="https://xly5.gitee.io/tags/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM常用基础参数</title>
-    <link href="https://xly5.gitee.io/2020/11/09/jvm-chang-yong-ji-chu-can-shu/"/>
-    <id>https://xly5.gitee.io/2020/11/09/jvm-chang-yong-ji-chu-can-shu/</id>
-    <published>2020-11-09T11:32:32.000Z</published>
-    <updated>2020-11-09T12:28:17.759Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;JVM常用参数&quot;&gt;&lt;a href=&quot;#JVM常用参数&quot; class=&quot;headerlink&quot; title=&quot;JVM常用参数&quot;&gt;&lt;/a&gt;JVM常用参数&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JVM" scheme="https://xly5.gitee.io/categories/JVM/"/>
-    
-    
-    <category term="JVM参数" scheme="https://xly5.gitee.io/tags/JVM%E5%8F%82%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM参数</title>
-    <link href="https://xly5.gitee.io/2020/11/09/jvm-can-shu/"/>
-    <id>https://xly5.gitee.io/2020/11/09/jvm-can-shu/</id>
-    <published>2020-11-09T07:14:56.000Z</published>
-    <updated>2020-11-09T08:22:52.622Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;JVM的三个参数类型&quot;&gt;&lt;a href=&quot;#JVM的三个参数类型&quot; class=&quot;headerlink&quot; title=&quot;JVM的三个参数类型&quot;&gt;&lt;/a&gt;JVM的三个参数类型&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JVM" scheme="https://xly5.gitee.io/categories/JVM/"/>
-    
-    
-    <category term="JVM参数" scheme="https://xly5.gitee.io/tags/JVM%E5%8F%82%E6%95%B0/"/>
     
   </entry>
   
