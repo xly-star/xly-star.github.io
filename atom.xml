@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2020-11-23T07:33:33.335Z</updated>
+  <updated>2020-12-03T11:46:36.409Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>spring注解(下)</title>
+    <link href="https://xly5.gitee.io/2020/12/03/spring-zhu-jie-xia/"/>
+    <id>https://xly5.gitee.io/2020/12/03/spring-zhu-jie-xia/</id>
+    <published>2020-12-03T11:19:00.000Z</published>
+    <updated>2020-12-03T11:46:36.409Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;断点:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="spring注解" scheme="https://xly5.gitee.io/categories/spring%E6%B3%A8%E8%A7%A3/"/>
+    
+    
+    <category term="spring注解AOP" scheme="https://xly5.gitee.io/tags/spring%E6%B3%A8%E8%A7%A3AOP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring注解(上)</title>
+    <link href="https://xly5.gitee.io/2020/11/29/spring-zhu-jie-shang/"/>
+    <id>https://xly5.gitee.io/2020/11/29/spring-zhu-jie-shang/</id>
+    <published>2020-11-29T02:07:29.000Z</published>
+    <updated>2020-12-03T11:19:45.011Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;导入ioc jar&lt;code&gt;spring-context&lt;/code&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="spring注解" scheme="https://xly5.gitee.io/categories/spring%E6%B3%A8%E8%A7%A3/"/>
+    
+    
+    <category term="spring注解IOC" scheme="https://xly5.gitee.io/tags/spring%E6%B3%A8%E8%A7%A3IOC/"/>
+    
+  </entry>
   
   <entry>
     <title>mybatis复习</title>
@@ -59,7 +97,7 @@
     <link href="https://xly5.gitee.io/2020/11/20/spring-fu-xi/"/>
     <id>https://xly5.gitee.io/2020/11/20/spring-fu-xi/</id>
     <published>2020-11-20T00:52:06.000Z</published>
-    <updated>2020-11-20T07:29:26.335Z</updated>
+    <updated>2020-12-01T08:03:31.911Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;spring创建通过IOC-Inversion-of-Control-创建对象&quot;&gt;&lt;a href=&quot;#spring创建通过IOC-Inversion-of-Control-创建对象&quot; class=&quot;headerlink&quot; title=&quot;spring创建通过IOC(Inversion of Control)创建对象&quot;&gt;&lt;/a&gt;spring创建通过IOC(Inversion of Control)创建对象&lt;/h1&gt;</summary>
@@ -363,44 +401,6 @@
     
     
     <category term="OOM" scheme="https://xly5.gitee.io/tags/OOM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GCRoot</title>
-    <link href="https://xly5.gitee.io/2020/11/10/gcroot/"/>
-    <id>https://xly5.gitee.io/2020/11/10/gcroot/</id>
-    <published>2020-11-10T02:58:56.000Z</published>
-    <updated>2020-11-10T03:10:01.056Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/medias/GC/GCRoot.png&quot; alt=&quot;GCRoot&quot; title=&quot;GCRoot&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="GC" scheme="https://xly5.gitee.io/categories/GC/"/>
-    
-    
-    <category term="GCRoot" scheme="https://xly5.gitee.io/tags/GCRoot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>四大引用</title>
-    <link href="https://xly5.gitee.io/2020/11/10/si-da-yin-yong/"/>
-    <id>https://xly5.gitee.io/2020/11/10/si-da-yin-yong/</id>
-    <published>2020-11-10T02:40:45.000Z</published>
-    <updated>2020-11-10T02:58:08.585Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;强引用&quot;&gt;&lt;a href=&quot;#强引用&quot; class=&quot;headerlink&quot; title=&quot;强引用&quot;&gt;&lt;/a&gt;强引用&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="-GC" scheme="https://xly5.gitee.io/categories/GC/"/>
-    
-    
-    <category term="引用类型" scheme="https://xly5.gitee.io/tags/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"/>
     
   </entry>
   

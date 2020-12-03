@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-20
+                    2020-12-01
                 </div>
                 
 
@@ -707,7 +707,7 @@ public class MyLoggerAspect &#123;
     //写在finally中
     @After(value = &quot;test()&quot;)
     public void After(JoinPoint joinPoint)&#123;
-//        joinPoint
+//        joinPoint必须写在第一位参数不然sprig无法识别
         System.out.println(&quot;方法执行之后的finally中&quot;);
     &#125;
     //方法执行之后的 returning 返回值 传入参数列表的同名参数中
@@ -1459,7 +1459,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">42.7k</span>&nbsp;字
+                class="white-color">47.5k</span>&nbsp;字
             
             
             
