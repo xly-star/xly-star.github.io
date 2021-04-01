@@ -443,21 +443,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-01
+                    2021-01-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.8k
+                    5.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    19 分
+                    20 分
                 </div>
                 
 
@@ -886,6 +886,15 @@ public class BookServiceImpl implements BookService &#123;
         dao.updateBalance(uid,price);
     &#125;
 &#125;</code></pre>
+<h1 id="forward和不加的区别"><a href="#forward和不加的区别" class="headerlink" title="forward和不加的区别"></a><font color='red'>forward和不加的区别</font></h1><pre><code>     @RequestMapping(&quot;/favicon.ico&quot;)
+    public String fav()&#123;
+        return &quot;forward:/res/favicon.ico&quot;;
+    &#125;</code></pre>
+<p><strong>如果不加forward和redirect关键字，那么直接在return的字符串上添加springMVC配置文件里设置好的前缀和后缀，然后转发到资源。如果加上forward和redirect，那么就会根据关键字不同处理不同，如果是forward，那么不会拼接配置文件里设置的前缀和后缀，直接原字符串转发资源。如果是redirect则再向服务器发送一次新的请求，forward和redirect的区别是前者在服务器端重发，浏览器感知不到，地址栏也不会变化。</strong></p>
+<p>favico.ico是浏览器自动发出的请求来加载小图标，当加上静态资源的访问路径（/res）时需要加上以上controller,不然浏览器直接访问</p>
+<p>favico.ico报404</p>
+<p>当在返回值是String也没有加上forward或redirect还有@ResponseBody时，也就是需要视图解析器时，必须要有模板引擎才能转发页面</p>
+<p>springboot默认templates是不能直接访问的为了保护页面，模板引擎有（jsp，thymeleaf，freeMark）。static可以直接被访问</p>
 
             </div>
             <hr/>
@@ -1459,7 +1468,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">91.5k</span>&nbsp;字
+                class="white-color">94.9k</span>&nbsp;字
             
             
             

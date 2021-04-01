@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2020-12-30T11:38:42.491Z</updated>
+  <updated>2021-03-31T11:46:23.540Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AQS源码</title>
+    <link href="https://xly5.gitee.io/2021/03/31/aqs-yuan-ma/"/>
+    <id>https://xly5.gitee.io/2021/03/31/aqs-yuan-ma/</id>
+    <published>2021-03-31T11:04:44.000Z</published>
+    <updated>2021-03-31T11:46:23.540Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;AbstractQueuedSynchronizer之AQS-抽象的队列同步器-源码讲解&quot;&gt;&lt;a href=&quot;#AbstractQueuedSynchronizer之AQS-抽象的队列同步器-源码讲解&quot; class=&quot;headerlink&quot; title=&quot;AbstractQueuedSynchronizer之AQS(抽象的队列同步器)源码讲解&quot;&gt;&lt;/a&gt;&lt;code&gt;AbstractQueuedSynchronizer&lt;/code&gt;之&lt;code&gt;AQS&lt;/code&gt;(抽象的队列同步器)源码讲解&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
+    
+    <category term="AQS" scheme="https://xly5.gitee.io/categories/JUC/AQS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LockSupport初体验</title>
+    <link href="https://xly5.gitee.io/2021/03/31/locksupport-chu-ti-yan/"/>
+    <id>https://xly5.gitee.io/2021/03/31/locksupport-chu-ti-yan/</id>
+    <published>2021-03-31T10:15:06.000Z</published>
+    <updated>2021-03-31T11:03:37.554Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;LockSupport&quot;&gt;&lt;a href=&quot;#LockSupport&quot; class=&quot;headerlink&quot; title=&quot;LockSupport&quot;&gt;&lt;/a&gt;LockSupport&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
+    
+    <category term="锁" scheme="https://xly5.gitee.io/categories/JUC/%E9%94%81/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java字符串</title>
+    <link href="https://xly5.gitee.io/2021/03/30/java-zi-fu-chuan/"/>
+    <id>https://xly5.gitee.io/2021/03/30/java-zi-fu-chuan/</id>
+    <published>2021-03-30T07:56:13.000Z</published>
+    <updated>2021-03-30T08:55:19.069Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;</summary>
+    
+    
+    
+    
+    <category term="java基础" scheme="https://xly5.gitee.io/tags/java%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>旅游规划与开发复习</title>
@@ -170,7 +225,7 @@
     <link href="https://xly5.gitee.io/2020/11/20/spring-fu-xi/"/>
     <id>https://xly5.gitee.io/2020/11/20/spring-fu-xi/</id>
     <published>2020-11-20T00:52:06.000Z</published>
-    <updated>2020-12-01T08:03:31.911Z</updated>
+    <updated>2021-01-11T12:23:49.981Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;spring创建通过IOC-Inversion-of-Control-创建对象&quot;&gt;&lt;a href=&quot;#spring创建通过IOC-Inversion-of-Control-创建对象&quot; class=&quot;headerlink&quot; title=&quot;spring创建通过IOC(Inversion of Control)创建对象&quot;&gt;&lt;/a&gt;spring创建通过IOC(Inversion of Control)创建对象&lt;/h1&gt;</summary>
@@ -354,67 +409,6 @@
     
     
     <category term="vim" scheme="https://xly5.gitee.io/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Javase(下)</title>
-    <link href="https://xly5.gitee.io/2020/11/14/javase-xia/"/>
-    <id>https://xly5.gitee.io/2020/11/14/javase-xia/</id>
-    <published>2020-11-14T11:16:51.000Z</published>
-    <updated>2020-11-15T14:51:06.158Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;线程&quot;&gt;&lt;a href=&quot;#线程&quot; class=&quot;headerlink&quot; title=&quot;线程&quot;&gt;&lt;/a&gt;线程&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="Javase" scheme="https://xly5.gitee.io/categories/Javase/"/>
-    
-    <category term="interview" scheme="https://xly5.gitee.io/categories/Javase/interview/"/>
-    
-    
-    <category term="小知识" scheme="https://xly5.gitee.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVASE小知识</title>
-    <link href="https://xly5.gitee.io/2020/11/13/javase-xiao-zhi-shi/"/>
-    <id>https://xly5.gitee.io/2020/11/13/javase-xiao-zhi-shi/</id>
-    <published>2020-11-13T02:25:04.000Z</published>
-    <updated>2020-11-15T14:44:59.712Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;运算符&quot;&gt;&lt;a href=&quot;#运算符&quot; class=&quot;headerlink&quot; title=&quot;运算符&quot;&gt;&lt;/a&gt;运算符&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="Javase" scheme="https://xly5.gitee.io/categories/Javase/"/>
-    
-    <category term="interview" scheme="https://xly5.gitee.io/categories/Javase/interview/"/>
-    
-    
-    <category term="小知识" scheme="https://xly5.gitee.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>github搜索</title>
-    <link href="https://xly5.gitee.io/2020/11/12/github-sou-suo/"/>
-    <id>https://xly5.gitee.io/2020/11/12/github-sou-suo/</id>
-    <published>2020-11-12T10:32:04.000Z</published>
-    <updated>2020-11-12T10:52:44.454Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;github搜索命令&quot;&gt;&lt;a href=&quot;#github搜索命令&quot; class=&quot;headerlink&quot; title=&quot;github搜索命令&quot;&gt;&lt;/a&gt;github搜索命令&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="github" scheme="https://xly5.gitee.io/categories/github/"/>
-    
-    
-    <category term="github" scheme="https://xly5.gitee.io/tags/github/"/>
     
   </entry>
   
