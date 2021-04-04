@@ -6,7 +6,7 @@
   <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://xly5.gitee.io/"/>
-  <updated>2021-03-31T11:46:23.540Z</updated>
+  <updated>2021-04-04T02:32:22.227Z</updated>
   <id>https://xly5.gitee.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手写LRU算法</title>
+    <link href="https://xly5.gitee.io/2021/04/04/shou-xie-lru-suan-fa/"/>
+    <id>https://xly5.gitee.io/2021/04/04/shou-xie-lru-suan-fa/</id>
+    <published>2021-04-04T02:28:01.000Z</published>
+    <updated>2021-04-04T02:32:22.227Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;LRU算法&quot;&gt;&lt;a href=&quot;#LRU算法&quot; class=&quot;headerlink&quot; title=&quot;LRU算法&quot;&gt;&lt;/a&gt;LRU算法&lt;/h1&gt;</summary>
+    
+    
+    
+    
+    <category term="算法" scheme="https://xly5.gitee.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>AQS源码</title>
@@ -390,25 +407,6 @@
     
     
     <category term="关机命令" scheme="https://xly5.gitee.io/tags/%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vim操作</title>
-    <link href="https://xly5.gitee.io/2020/11/17/vim-cao-zuo/"/>
-    <id>https://xly5.gitee.io/2020/11/17/vim-cao-zuo/</id>
-    <published>2020-11-17T00:44:23.000Z</published>
-    <updated>2020-11-17T00:48:49.920Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;vim基本操作&quot;&gt;&lt;a href=&quot;#vim基本操作&quot; class=&quot;headerlink&quot; title=&quot;vim基本操作&quot;&gt;&lt;/a&gt;vim基本操作&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="linux" scheme="https://xly5.gitee.io/categories/linux/"/>
-    
-    
-    <category term="vim" scheme="https://xly5.gitee.io/tags/vim/"/>
     
   </entry>
   
