@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-03
+                    2021-05-23
                 </div>
                 
 
@@ -687,7 +687,7 @@ public PersonFactory personFactory()&#123;
 <h1 id="后置处理器"><a href="#后置处理器" class="headerlink" title="后置处理器"></a><font color="red">后置处理器</font></h1><p>实现BeanPostProcessor接口会为所有bean注入后置处理器,在springboot和spring中使用很多</p>
 <pre><code>public class MyHandler implements BeanPostProcessor &#123;
     /**
-     * 初始化方法之后调用
+     * 初始化方法之前调用
      * @param bean
      * @param beanName
      * @return
@@ -864,7 +864,7 @@ public class MainConfigOfDataSource implements EmbeddedValueResolverAware &#123;
     &#125;
 &#125;</code></pre>
 <p>设置配置环境<code>-Dspring.profiles.active=test</code>或者</p>
-<p>使用无惨构造器初始化ioc容器对象在设置环境变量之后注册配置类，在启动ioc容器，不能使用有参构造器因为有参构造器中直接启动了ioc容器，在配置环境变量没有用了</p>
+<p>使用无参构造器初始化ioc容器对象在设置环境变量之后注册配置类，在启动ioc容器，不能使用有参构造器因为有参构造器中直接启动了ioc容器，在配置环境变量没有用了</p>
 <pre><code>AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
 applicationContext.getEnvironment().setActiveProfiles(&quot;dev&quot;,&quot;test&quot;);
 applicationContext.register(MainConfigOfDataSource.class);
@@ -894,7 +894,7 @@ applicationContext.refresh();</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xly5.gitee.io/2020/11/29/spring-zhu-jie-shang/">https://xly5.gitee.io/2020/11/29/spring-zhu-jie-shang/</a>
+                    <a href="https://xly-star.github.io/2020/11/29/spring-zhu-jie-shang/">https://xly-star.github.io/2020/11/29/spring-zhu-jie-shang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1442,7 +1442,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">95.6k</span>&nbsp;字
+                class="white-color">98.9k</span>&nbsp;字
             
             
             

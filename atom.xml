@@ -3,11 +3,11 @@
   <title>博客</title>
   
   <subtitle>个人博客</subtitle>
-  <link href="https://xly5.gitee.io/atom.xml" rel="self"/>
+  <link href="https://xly-star.github.io/atom.xml" rel="self"/>
   
-  <link href="https://xly5.gitee.io/"/>
-  <updated>2021-04-04T02:32:22.227Z</updated>
-  <id>https://xly5.gitee.io/</id>
+  <link href="https://xly-star.github.io/"/>
+  <updated>2021-05-28T08:53:35.710Z</updated>
+  <id>https://xly-star.github.io/</id>
   
   <author>
     <name>xu ling yun</name>
@@ -17,9 +17,94 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>跳表</title>
+    <link href="https://xly-star.github.io/2021/05/28/tiao-biao/"/>
+    <id>https://xly-star.github.io/2021/05/28/tiao-biao/</id>
+    <published>2021-05-28T11:04:44.000Z</published>
+    <updated>2021-05-28T08:53:35.710Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;为什么redis使用跳表不使用红黑树&quot;&gt;&lt;a href=&quot;#为什么redis使用跳表不使用红黑树&quot; class=&quot;headerlink&quot; title=&quot;为什么redis使用跳表不使用红黑树&quot;&gt;&lt;/a&gt;为什么redis使用跳表不使用红黑树&lt;/h1&gt;</summary>
+    
+    
+    
+    
+    <category term="数据结构" scheme="https://xly-star.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快速排序和归并排序</title>
+    <link href="https://xly-star.github.io/2021/05/26/kuai-su-pai-xu/"/>
+    <id>https://xly-star.github.io/2021/05/26/kuai-su-pai-xu/</id>
+    <published>2021-05-26T00:17:46.000Z</published>
+    <updated>2021-05-26T01:13:10.423Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot; title=&quot;快速排序&quot;&gt;&lt;/a&gt;快速排序&lt;/h1&gt;</summary>
+    
+    
+    
+    
+    <category term="算法" scheme="https://xly-star.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>反射的原理</title>
+    <link href="https://xly-star.github.io/2021/05/26/fan-she-de-yuan-li/"/>
+    <id>https://xly-star.github.io/2021/05/26/fan-she-de-yuan-li/</id>
+    <published>2021-05-26T00:17:46.000Z</published>
+    <updated>2021-05-26T15:20:17.902Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;反射的机制&quot;&gt;&lt;a href=&quot;#反射的机制&quot; class=&quot;headerlink&quot; title=&quot;反射的机制&quot;&gt;&lt;/a&gt;反射的机制&lt;/h1&gt;</summary>
+    
+    
+    
+    
+    <category term="Java基础" scheme="https://xly-star.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HashMap和红黑树</title>
+    <link href="https://xly-star.github.io/2021/05/25/hashmap-he-hong-hei-shu/"/>
+    <id>https://xly-star.github.io/2021/05/25/hashmap-he-hong-hei-shu/</id>
+    <published>2021-05-25T07:17:21.000Z</published>
+    <updated>2021-05-25T15:10:33.030Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Hash冲突解决方法&quot;&gt;&lt;a href=&quot;#Hash冲突解决方法&quot; class=&quot;headerlink&quot; title=&quot;Hash冲突解决方法&quot;&gt;&lt;/a&gt;Hash冲突解决方法&lt;/h1&gt;</summary>
+    
+    
+    
+    
+    <category term="interview" scheme="https://xly-star.github.io/tags/interview/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>求所有子串的差的和</title>
+    <link href="https://xly-star.github.io/2021/05/19/qiu-suo-you-zi-chuan-de-chai-de-he/"/>
+    <id>https://xly-star.github.io/2021/05/19/qiu-suo-you-zi-chuan-de-chai-de-he/</id>
+    <published>2021-05-19T04:35:34.000Z</published>
+    <updated>2021-05-19T04:41:36.540Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h1&gt;</summary>
+    
+    
+    
+    
+    <category term="算法" scheme="https://xly-star.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>手写LRU算法</title>
-    <link href="https://xly5.gitee.io/2021/04/04/shou-xie-lru-suan-fa/"/>
-    <id>https://xly5.gitee.io/2021/04/04/shou-xie-lru-suan-fa/</id>
+    <link href="https://xly-star.github.io/2021/04/04/shou-xie-lru-suan-fa/"/>
+    <id>https://xly-star.github.io/2021/04/04/shou-xie-lru-suan-fa/</id>
     <published>2021-04-04T02:28:01.000Z</published>
     <updated>2021-04-04T02:32:22.227Z</updated>
     
@@ -29,33 +114,33 @@
     
     
     
-    <category term="算法" scheme="https://xly5.gitee.io/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://xly-star.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>AQS源码</title>
-    <link href="https://xly5.gitee.io/2021/03/31/aqs-yuan-ma/"/>
-    <id>https://xly5.gitee.io/2021/03/31/aqs-yuan-ma/</id>
+    <link href="https://xly-star.github.io/2021/03/31/aqs-yuan-ma/"/>
+    <id>https://xly-star.github.io/2021/03/31/aqs-yuan-ma/</id>
     <published>2021-03-31T11:04:44.000Z</published>
-    <updated>2021-03-31T11:46:23.540Z</updated>
+    <updated>2021-05-28T00:29:07.039Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;AbstractQueuedSynchronizer之AQS-抽象的队列同步器-源码讲解&quot;&gt;&lt;a href=&quot;#AbstractQueuedSynchronizer之AQS-抽象的队列同步器-源码讲解&quot; class=&quot;headerlink&quot; title=&quot;AbstractQueuedSynchronizer之AQS(抽象的队列同步器)源码讲解&quot;&gt;&lt;/a&gt;&lt;code&gt;AbstractQueuedSynchronizer&lt;/code&gt;之&lt;code&gt;AQS&lt;/code&gt;(抽象的队列同步器)源码讲解&lt;/h1&gt;</summary>
     
     
     
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
+    <category term="JUC" scheme="https://xly-star.github.io/categories/JUC/"/>
     
-    <category term="AQS" scheme="https://xly5.gitee.io/categories/JUC/AQS/"/>
+    <category term="AQS" scheme="https://xly-star.github.io/categories/JUC/AQS/"/>
     
     
   </entry>
   
   <entry>
     <title>LockSupport初体验</title>
-    <link href="https://xly5.gitee.io/2021/03/31/locksupport-chu-ti-yan/"/>
-    <id>https://xly5.gitee.io/2021/03/31/locksupport-chu-ti-yan/</id>
+    <link href="https://xly-star.github.io/2021/03/31/locksupport-chu-ti-yan/"/>
+    <id>https://xly-star.github.io/2021/03/31/locksupport-chu-ti-yan/</id>
     <published>2021-03-31T10:15:06.000Z</published>
     <updated>2021-03-31T11:03:37.554Z</updated>
     
@@ -64,17 +149,17 @@
     
     
     
-    <category term="JUC" scheme="https://xly5.gitee.io/categories/JUC/"/>
+    <category term="JUC" scheme="https://xly-star.github.io/categories/JUC/"/>
     
-    <category term="锁" scheme="https://xly5.gitee.io/categories/JUC/%E9%94%81/"/>
+    <category term="锁" scheme="https://xly-star.github.io/categories/JUC/%E9%94%81/"/>
     
     
   </entry>
   
   <entry>
     <title>Java字符串</title>
-    <link href="https://xly5.gitee.io/2021/03/30/java-zi-fu-chuan/"/>
-    <id>https://xly5.gitee.io/2021/03/30/java-zi-fu-chuan/</id>
+    <link href="https://xly-star.github.io/2021/03/30/java-zi-fu-chuan/"/>
+    <id>https://xly-star.github.io/2021/03/30/java-zi-fu-chuan/</id>
     <published>2021-03-30T07:56:13.000Z</published>
     <updated>2021-03-30T08:55:19.069Z</updated>
     
@@ -84,14 +169,14 @@
     
     
     
-    <category term="java基础" scheme="https://xly5.gitee.io/tags/java%E5%9F%BA%E7%A1%80/"/>
+    <category term="java基础" scheme="https://xly-star.github.io/tags/java%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>旅游规划与开发复习</title>
-    <link href="https://xly5.gitee.io/2020/12/22/lu-you-gui-hua-yu-kai-fa-fu-xi/"/>
-    <id>https://xly5.gitee.io/2020/12/22/lu-you-gui-hua-yu-kai-fa-fu-xi/</id>
+    <link href="https://xly-star.github.io/2020/12/22/lu-you-gui-hua-yu-kai-fa-fu-xi/"/>
+    <id>https://xly-star.github.io/2020/12/22/lu-you-gui-hua-yu-kai-fa-fu-xi/</id>
     <published>2020-12-22T01:56:26.000Z</published>
     <updated>2020-12-30T11:38:42.491Z</updated>
     
@@ -100,15 +185,15 @@
     
     
     
-    <category term="旅游规划与开发" scheme="https://xly5.gitee.io/categories/%E6%97%85%E6%B8%B8%E8%A7%84%E5%88%92%E4%B8%8E%E5%BC%80%E5%8F%91/"/>
+    <category term="旅游规划与开发" scheme="https://xly-star.github.io/categories/%E6%97%85%E6%B8%B8%E8%A7%84%E5%88%92%E4%B8%8E%E5%BC%80%E5%8F%91/"/>
     
     
   </entry>
   
   <entry>
     <title>计算机操作系统</title>
-    <link href="https://xly5.gitee.io/2020/12/13/ji-suan-ji-cao-zuo-xi-tong/"/>
-    <id>https://xly5.gitee.io/2020/12/13/ji-suan-ji-cao-zuo-xi-tong/</id>
+    <link href="https://xly-star.github.io/2020/12/13/ji-suan-ji-cao-zuo-xi-tong/"/>
+    <id>https://xly-star.github.io/2020/12/13/ji-suan-ji-cao-zuo-xi-tong/</id>
     <published>2020-12-13T07:34:02.000Z</published>
     <updated>2020-12-28T11:59:02.215Z</updated>
     
@@ -118,14 +203,14 @@
     
     
     
-    <category term="计算机操作系统" scheme="https://xly5.gitee.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="计算机操作系统" scheme="https://xly-star.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>windows快捷键</title>
-    <link href="https://xly5.gitee.io/2020/12/06/windows-kuai-jie-jian/"/>
-    <id>https://xly5.gitee.io/2020/12/06/windows-kuai-jie-jian/</id>
+    <link href="https://xly-star.github.io/2020/12/06/windows-kuai-jie-jian/"/>
+    <id>https://xly-star.github.io/2020/12/06/windows-kuai-jie-jian/</id>
     <published>2020-12-06T10:41:48.000Z</published>
     <updated>2020-12-06T11:06:08.241Z</updated>
     
@@ -154,17 +239,17 @@
     
     
     
-    <category term="window" scheme="https://xly5.gitee.io/categories/window/"/>
+    <category term="window" scheme="https://xly-star.github.io/categories/window/"/>
     
     
-    <category term="window" scheme="https://xly5.gitee.io/tags/window/"/>
+    <category term="window" scheme="https://xly-star.github.io/tags/window/"/>
     
   </entry>
   
   <entry>
     <title>spring注解(下)</title>
-    <link href="https://xly5.gitee.io/2020/12/03/spring-zhu-jie-xia/"/>
-    <id>https://xly5.gitee.io/2020/12/03/spring-zhu-jie-xia/</id>
+    <link href="https://xly-star.github.io/2020/12/03/spring-zhu-jie-xia/"/>
+    <id>https://xly-star.github.io/2020/12/03/spring-zhu-jie-xia/</id>
     <published>2020-12-03T11:19:00.000Z</published>
     <updated>2021-01-08T08:40:12.846Z</updated>
     
@@ -173,36 +258,36 @@
     
     
     
-    <category term="spring注解" scheme="https://xly5.gitee.io/categories/spring%E6%B3%A8%E8%A7%A3/"/>
+    <category term="spring注解" scheme="https://xly-star.github.io/categories/spring%E6%B3%A8%E8%A7%A3/"/>
     
     
-    <category term="spring注解AOP" scheme="https://xly5.gitee.io/tags/spring%E6%B3%A8%E8%A7%A3AOP/"/>
+    <category term="spring注解AOP" scheme="https://xly-star.github.io/tags/spring%E6%B3%A8%E8%A7%A3AOP/"/>
     
   </entry>
   
   <entry>
     <title>spring注解(上)</title>
-    <link href="https://xly5.gitee.io/2020/11/29/spring-zhu-jie-shang/"/>
-    <id>https://xly5.gitee.io/2020/11/29/spring-zhu-jie-shang/</id>
+    <link href="https://xly-star.github.io/2020/11/29/spring-zhu-jie-shang/"/>
+    <id>https://xly-star.github.io/2020/11/29/spring-zhu-jie-shang/</id>
     <published>2020-11-29T02:07:29.000Z</published>
-    <updated>2020-12-03T11:19:45.011Z</updated>
+    <updated>2021-05-23T01:14:09.413Z</updated>
     
     
     <summary type="html">&lt;p&gt;导入ioc jar&lt;code&gt;spring-context&lt;/code&gt;&lt;/p&gt;</summary>
     
     
     
-    <category term="spring注解" scheme="https://xly5.gitee.io/categories/spring%E6%B3%A8%E8%A7%A3/"/>
+    <category term="spring注解" scheme="https://xly-star.github.io/categories/spring%E6%B3%A8%E8%A7%A3/"/>
     
     
-    <category term="spring注解IOC" scheme="https://xly5.gitee.io/tags/spring%E6%B3%A8%E8%A7%A3IOC/"/>
+    <category term="spring注解IOC" scheme="https://xly-star.github.io/tags/spring%E6%B3%A8%E8%A7%A3IOC/"/>
     
   </entry>
   
   <entry>
     <title>mybatis复习</title>
-    <link href="https://xly5.gitee.io/2020/11/21/mybatis-fu-xi/"/>
-    <id>https://xly5.gitee.io/2020/11/21/mybatis-fu-xi/</id>
+    <link href="https://xly-star.github.io/2020/11/21/mybatis-fu-xi/"/>
+    <id>https://xly-star.github.io/2020/11/21/mybatis-fu-xi/</id>
     <published>2020-11-21T00:34:19.000Z</published>
     <updated>2020-11-23T07:33:33.335Z</updated>
     
@@ -211,17 +296,17 @@
     
     
     
-    <category term="mybatis" scheme="https://xly5.gitee.io/categories/mybatis/"/>
+    <category term="mybatis" scheme="https://xly-star.github.io/categories/mybatis/"/>
     
     
-    <category term="mybatis" scheme="https://xly5.gitee.io/tags/mybatis/"/>
+    <category term="mybatis" scheme="https://xly-star.github.io/tags/mybatis/"/>
     
   </entry>
   
   <entry>
     <title>springmvc复习</title>
-    <link href="https://xly5.gitee.io/2020/11/20/springmvc-fu-xi/"/>
-    <id>https://xly5.gitee.io/2020/11/20/springmvc-fu-xi/</id>
+    <link href="https://xly-star.github.io/2020/11/20/springmvc-fu-xi/"/>
+    <id>https://xly-star.github.io/2020/11/20/springmvc-fu-xi/</id>
     <published>2020-11-20T07:41:28.000Z</published>
     <updated>2020-11-20T12:01:43.484Z</updated>
     
@@ -230,17 +315,17 @@
     
     
     
-    <category term="springmvc" scheme="https://xly5.gitee.io/categories/springmvc/"/>
+    <category term="springmvc" scheme="https://xly-star.github.io/categories/springmvc/"/>
     
     
-    <category term="springmvc" scheme="https://xly5.gitee.io/tags/springmvc/"/>
+    <category term="springmvc" scheme="https://xly-star.github.io/tags/springmvc/"/>
     
   </entry>
   
   <entry>
     <title>spring复习</title>
-    <link href="https://xly5.gitee.io/2020/11/20/spring-fu-xi/"/>
-    <id>https://xly5.gitee.io/2020/11/20/spring-fu-xi/</id>
+    <link href="https://xly-star.github.io/2020/11/20/spring-fu-xi/"/>
+    <id>https://xly-star.github.io/2020/11/20/spring-fu-xi/</id>
     <published>2020-11-20T00:52:06.000Z</published>
     <updated>2021-01-11T12:23:49.981Z</updated>
     
@@ -249,17 +334,17 @@
     
     
     
-    <category term="spring" scheme="https://xly5.gitee.io/categories/spring/"/>
+    <category term="spring" scheme="https://xly-star.github.io/categories/spring/"/>
     
     
-    <category term="spring" scheme="https://xly5.gitee.io/tags/spring/"/>
+    <category term="spring" scheme="https://xly-star.github.io/tags/spring/"/>
     
   </entry>
   
   <entry>
     <title>tomcat连接</title>
-    <link href="https://xly5.gitee.io/2020/11/19/tomcat-lian-jie/"/>
-    <id>https://xly5.gitee.io/2020/11/19/tomcat-lian-jie/</id>
+    <link href="https://xly-star.github.io/2020/11/19/tomcat-lian-jie/"/>
+    <id>https://xly-star.github.io/2020/11/19/tomcat-lian-jie/</id>
     <published>2020-11-19T11:00:59.000Z</published>
     <updated>2020-11-19T11:04:30.111Z</updated>
     
@@ -268,17 +353,17 @@
     
     
     
-    <category term="tomcat" scheme="https://xly5.gitee.io/categories/tomcat/"/>
+    <category term="tomcat" scheme="https://xly-star.github.io/categories/tomcat/"/>
     
     
-    <category term="tomcat" scheme="https://xly5.gitee.io/tags/tomcat/"/>
+    <category term="tomcat" scheme="https://xly-star.github.io/tags/tomcat/"/>
     
   </entry>
   
   <entry>
     <title>ThreadLocal</title>
-    <link href="https://xly5.gitee.io/2020/11/19/threadlocal/"/>
-    <id>https://xly5.gitee.io/2020/11/19/threadlocal/</id>
+    <link href="https://xly-star.github.io/2020/11/19/threadlocal/"/>
+    <id>https://xly-star.github.io/2020/11/19/threadlocal/</id>
     <published>2020-11-19T10:48:05.000Z</published>
     <updated>2020-11-19T11:47:02.839Z</updated>
     
@@ -287,17 +372,17 @@
     
     
     
-    <category term="ThreadLocal" scheme="https://xly5.gitee.io/categories/ThreadLocal/"/>
+    <category term="ThreadLocal" scheme="https://xly-star.github.io/categories/ThreadLocal/"/>
     
     
-    <category term="ThreadLocal" scheme="https://xly5.gitee.io/tags/ThreadLocal/"/>
+    <category term="ThreadLocal" scheme="https://xly-star.github.io/tags/ThreadLocal/"/>
     
   </entry>
   
   <entry>
     <title>文件上传和下载</title>
-    <link href="https://xly5.gitee.io/2020/11/19/wen-jian-shang-chuan-he-xia-zai/"/>
-    <id>https://xly5.gitee.io/2020/11/19/wen-jian-shang-chuan-he-xia-zai/</id>
+    <link href="https://xly-star.github.io/2020/11/19/wen-jian-shang-chuan-he-xia-zai/"/>
+    <id>https://xly-star.github.io/2020/11/19/wen-jian-shang-chuan-he-xia-zai/</id>
     <published>2020-11-19T02:17:23.000Z</published>
     <updated>2020-11-19T02:34:36.850Z</updated>
     
@@ -306,107 +391,10 @@
     
     
     
-    <category term="文件上传和下载" scheme="https://xly5.gitee.io/categories/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/"/>
+    <category term="文件上传和下载" scheme="https://xly-star.github.io/categories/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/"/>
     
     
-    <category term="文件上传和下载" scheme="https://xly5.gitee.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EL表达式</title>
-    <link href="https://xly5.gitee.io/2020/11/18/el-biao-da-shi/"/>
-    <id>https://xly5.gitee.io/2020/11/18/el-biao-da-shi/</id>
-    <published>2020-11-18T01:03:33.000Z</published>
-    <updated>2020-11-20T07:22:25.022Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;EL 表达式的全称是：Expression Language。是表达式语言。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JSP" scheme="https://xly5.gitee.io/categories/JSP/"/>
-    
-    
-    <category term="EL表达式" scheme="https://xly5.gitee.io/tags/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JSP响应对象</title>
-    <link href="https://xly5.gitee.io/2020/11/18/jsp-xiang-ying-dui-xiang/"/>
-    <id>https://xly5.gitee.io/2020/11/18/jsp-xiang-ying-dui-xiang/</id>
-    <published>2020-11-18T00:41:40.000Z</published>
-    <updated>2020-11-18T01:03:04.760Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;jsp-中的-out-输出和-response-getWriter-输出的区别&quot;&gt;&lt;a href=&quot;#jsp-中的-out-输出和-response-getWriter-输出的区别&quot; class=&quot;headerlink&quot; title=&quot;jsp 中的 out 输出和 response.getWriter 输出的区别&quot;&gt;&lt;/a&gt;jsp 中的 out 输出和 response.getWriter 输出的区别&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="JSP" scheme="https://xly5.gitee.io/categories/JSP/"/>
-    
-    
-    <category term="JSP" scheme="https://xly5.gitee.io/tags/JSP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>servlet生命周期</title>
-    <link href="https://xly5.gitee.io/2020/11/17/servlet-sheng-ming-zhou-qi/"/>
-    <id>https://xly5.gitee.io/2020/11/17/servlet-sheng-ming-zhou-qi/</id>
-    <published>2020-11-17T11:49:27.000Z</published>
-    <updated>2020-11-17T13:49:07.383Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;servlet生命周期&quot;&gt;&lt;a href=&quot;#servlet生命周期&quot; class=&quot;headerlink&quot; title=&quot;servlet生命周期&quot;&gt;&lt;/a&gt;servlet生命周期&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="servlet" scheme="https://xly5.gitee.io/categories/servlet/"/>
-    
-    <category term="生命周期" scheme="https://xly5.gitee.io/categories/servlet/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
-    
-    
-    <category term="servlet生命周期" scheme="https://xly5.gitee.io/tags/servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux</title>
-    <link href="https://xly5.gitee.io/2020/11/17/linux-zhao-hui-mi-ma/"/>
-    <id>https://xly5.gitee.io/2020/11/17/linux-zhao-hui-mi-ma/</id>
-    <published>2020-11-17T01:17:59.000Z</published>
-    <updated>2020-11-17T02:56:38.377Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;linux找回密码&quot;&gt;&lt;a href=&quot;#linux找回密码&quot; class=&quot;headerlink&quot; title=&quot;linux找回密码&quot;&gt;&lt;/a&gt;linux找回密码&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="linux" scheme="https://xly5.gitee.io/categories/linux/"/>
-    
-    
-    <category term="linux找回密码" scheme="https://xly5.gitee.io/tags/linux%E6%89%BE%E5%9B%9E%E5%AF%86%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux</title>
-    <link href="https://xly5.gitee.io/2020/11/17/linux-guan-ji-ming-ling/"/>
-    <id>https://xly5.gitee.io/2020/11/17/linux-guan-ji-ming-ling/</id>
-    <published>2020-11-17T00:55:35.000Z</published>
-    <updated>2020-11-17T01:17:45.868Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;关机命令&quot;&gt;&lt;a href=&quot;#关机命令&quot; class=&quot;headerlink&quot; title=&quot;关机命令&quot;&gt;&lt;/a&gt;关机命令&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="linux" scheme="https://xly5.gitee.io/categories/linux/"/>
-    
-    
-    <category term="关机命令" scheme="https://xly5.gitee.io/tags/%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4/"/>
+    <category term="文件上传和下载" scheme="https://xly-star.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/"/>
     
   </entry>
   
